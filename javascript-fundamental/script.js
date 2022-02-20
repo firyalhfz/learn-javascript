@@ -27,7 +27,7 @@ console.log(javascriptIsFun);
 // console.log(typeof true);
 console.log(typeof javascriptIsFun);
 // console.log(typeof 23);
-// console.log(typeof 'Jonas');
+// console.log(typeof 'Firyal');
 javascriptIsFun = 'YES!';
 console.log(typeof javascriptIsFun);
 let year;
