@@ -37,6 +37,29 @@ year = 1991;
 console.log(typeof year);
 console.log(typeof null);
 
+// let, const and var
+
+// variable declaration
+// let is block scoped. A block is a chunk of code bounded by {}
+// let can be updated but not re-declared.
+let age = 19;
+age = 20;
+
+// const declarations are block scoped
+// const cannot be updated or re-declared
+const birthYear = 2002;
+// birthYear = 1990;
+// const job;
+
+// function/locally scoped
+// The scope is global when a var variable is declared outside a function. This means that any variable that is declared with var outside a function block is available for use in the whole window.
+// var variables can be re-declared and updated
+var job = 'programmer';
+job = 'teacher'
+lastName = 'Huwaida';
+console.log(lastName);
+
+
 // Basic Operators
 // Math operators
 const now = 2037;
@@ -45,9 +68,11 @@ const ageIlyas = now - 2018;
 console.log(ageFiryal, ageIlyas);
 console.log(ageFiryal * 2, ageFiryal / 10, 2 ** 3);
 // 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2
+
 const firstName = 'Firyal';
-const lastName = 'Schmedtmann';
+const lastName = 'Huwaida';
 console.log(firstName + ' ' + lastName);
+
 // Assignment operators
 let x = 10 + 5; // 15
 x += 10; // x = x + 10 = 25
@@ -56,9 +81,11 @@ x++; // x = x + 1
 x--;
 x--;
 console.log(x);
+
 // Comparison operators
-console.log(ageFiryal > ageIlyas); // >, <, >=, <=
-console.log(ageIlyas >= 18);
-const isFullAge = ageIlyas >= 18;
-console.log(now - 1991 > now - 2018);
+// >, <, >=, <=
+console.log(ageFiryal > ageIlyas); //true
+console.log(ageIlyas >= 18); //true
+const isFullAge = ageIlyas >= 18; //true
+console.log(now - 1991 > now - 2018); // true
 
