@@ -114,6 +114,7 @@ const averageAge = (ageFiryal + ageIlyas) / 2;
 console.log(ageFiryal, ageIlyas, averageAge);
 */
 
+/*
 //Strings and Template Literals
 const firstName = 'Firyal'
 const job = 'Software Engineer'
@@ -131,4 +132,26 @@ console.log("String with \n\ multiple \n\ lines")
 
 console.log(`String with 
 multiple 
-lines`)
+lines`) 
+*/
+
+//Taking decesions: if else Statement
+const age = 15
+
+if(age >= 18){
+    console.log('Firyal can start driving license')
+}else{
+    const yearsLeft = 18 - age
+    console.log(`Firyal is too young. Wait another ${yearsLeft} years`)
+}
+
+let century;
+const birthYear = 2022
+
+if(birthYear <= 2000){
+    century = 20
+}else {
+    century = 21
+}
+console.log(century)
+
