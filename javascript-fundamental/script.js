@@ -101,6 +101,7 @@ const isFullAge = ageIlyas >= 18; //true
 console.log(now - 2002 > now - 2018); // true
 */
 
+/*
 // Operator Precedence
 const now = 2037;
 const ageFiryal = now - 2002;
@@ -111,3 +112,23 @@ x = y = 25 - 10 - 5; // x = y = 10, x = 10
 console.log(x, y);
 const averageAge = (ageFiryal + ageIlyas) / 2;
 console.log(ageFiryal, ageIlyas, averageAge);
+*/
+
+//Strings and Template Literals
+const firstName = 'Firyal'
+const job = 'Software Engineer'
+const birthYear = 2002
+const year = 2022
+
+const firyal = "I'm " + firstName + ', a ' + (year - birthYear) + ' years old ' + job + '!'
+console.log(firyal)
+
+//instead of write string one by one, just use ``
+const firyalNew = `I'm ${firstName}, a ${year - birthYear} years old ${job} !`
+console.log(firyalNew)
+
+console.log("String with \n\ multiple \n\ lines")
+
+console.log(`String with 
+multiple 
+lines`)
