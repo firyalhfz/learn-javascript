@@ -175,6 +175,7 @@ console.log(century);
 // var name = "Firyal"
 // name = "Fauzi"
 
+/*
 //Truthy and falsy Values
 //5 falsy values: 0, '', undefined, null, Nan
 console.log(Boolean(0)) // false
@@ -198,6 +199,7 @@ if(height){
   console.log('Height is Undefined')
 }
 //result : Height is Undefined
+*/
 
 
 /*
@@ -224,3 +226,30 @@ if(favourite !== 23) console.log(`Why not 23?`)
 
 
 */
+
+
+//Logical Operators
+const hasDriverLicense = true //A
+const hasGoodVision = true //B
+
+console.log(hasDriverLicense && hasGoodVision) // true
+console.log(hasDriverLicense || hasGoodVision) // true
+console.log(!hasDriverLicense) // false
+
+if(hasDriverLicense && hasGoodVision){
+  console.log('Firyal is able to drive')
+} else {
+  console.log('someone else should drive')
+}
+//result : Firyal is able to drive
+
+const isTired = true 
+console.log(hasDriverLicense && hasGoodVision && isTired)
+
+if(hasDriverLicense && hasGoodVision && !isTired){
+  console.log('Firyal is able to drive')
+}else{
+  console.log('Someone else should drive')
+}
+//result : Someone else should Drive
+
