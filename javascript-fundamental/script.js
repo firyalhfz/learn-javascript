@@ -175,6 +175,32 @@ console.log(century);
 // var name = "Firyal"
 // name = "Fauzi"
 
+//Truthy and falsy Values
+//5 falsy values: 0, '', undefined, null, Nan
+console.log(Boolean(0)) // false
+console.log(Boolean(undefined)) //false
+console.log(Boolean('Firyal')) //true
+console.log(Boolean({})) // true
+console.log(Boolean('')) // false
+
+const money = 100
+if(money){
+  console.log(`Dont spend it all`)
+}else{
+  console.log(`You should get a job!`)
+}
+// result : Dont spend it all
+
+let height = 0
+if(height){
+  console.log('yay Heigh is defined')
+}else{
+  console.log('Height is Undefined')
+}
+//result : Height is Undefined
+
+
+/*
 //equality Operators: == vs ===
 const age = '18'
 if(age === 18) console.log(`You just became an adult (strict)`)
@@ -197,3 +223,4 @@ if(favourite === 23) {
 if(favourite !== 23) console.log(`Why not 23?`)
 
 
+*/
