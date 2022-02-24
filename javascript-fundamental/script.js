@@ -227,7 +227,7 @@ if(favourite !== 23) console.log(`Why not 23?`)
 
 */
 
-
+/*
 //Logical Operators
 const hasDriverLicense = true //A
 const hasGoodVision = true //B
@@ -253,3 +253,47 @@ if(hasDriverLicense && hasGoodVision && !isTired){
 }
 //result : Someone else should Drive
 
+*/
+
+//The switch Statement
+const day = 'thursday';
+
+switch (day) {
+  case 'monday':
+    console.log('Learn about variable and values');
+    console.log('learn about let const and var');
+    break;
+  case 'tuesday':
+    console.log('Learn about data types and operator')
+    break;
+  case 'wednesday':
+    console.log('Learn about Statement if else')
+    console.log('Learn about Boolean')
+    break;
+  case 'thursday':
+  case 'friday':
+    console.log('learn about Equality Operator and Switch Statement')
+    break;
+  case 'saturday':
+  case 'sunday':
+    console.log('Enjoy the wekeend!!')
+    break;
+  default:
+    console.log('Not a valid day!!')
+}
+
+if( day === 'monday'){
+  console.log("Learn about variable and values")
+  console.log("learn about let const and var")
+} else if(day === 'tuesday' ){
+  console.log("Learn about data types and operator")
+}else if(day === 'wednesday'){
+  console.log("Learn about Statement if else");
+  console.log("Learn about Boolean");
+}else if(day === 'thursday' || day === 'friday'){
+  console.log("learn about Equality Operator and Switch Statement");
+}else if(day === 'saturday' || day === 'sunday'){
+  console.log("Enjoy the wekeend!!");
+}else{
+  console.log("Not a valid day!!");
+}
