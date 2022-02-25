@@ -97,3 +97,27 @@ if(koalaScore < dolphinScore && dolphinScore >= 100){
     console.log(`No one wins the trophy`)
 }
 
+
+
+//Coding challenge #4
+
+
+/*
+Salwa wants to buils a very simple tip calculator for whenever she goes eating in a restaurant. In her country, its usual to tip 15% if the bill value is between 50 to 300. If the value is different, the tip is 20%.
+
+1. Your task is to calculate the tip, depending on the bill value. create a variable called 'tip' for this. Its not allowed to use an if/else statement (if its easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
+2. Print a string to the console containing the bill value, the tip, and the final value (bill + tip). Example: 'The bill was 275, the tip was 41.25 and the total value 316.25'
+TEST DATA: Test for bill values 275, 40, 430
+HINT: To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+HINT: value X is between 50 and 300, if its >= 50 && <= 300
+
+*/
+
+const eat = 40; 
+const tip = eat >= 50 && eat <= 300 ? console.log(`the tip is ${eat * 0.15}`) : console.log(`the tip was ${eat * 0.2}`) 
+
+const str = `the tip was ${tip}, the bill was ${eat}, the total was ${eat + tip}`
+
+//if else with ternary operator
+// const tip = condition A ? result A : condition B ? result B : result C
+

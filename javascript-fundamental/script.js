@@ -173,7 +173,7 @@ console.log(century);
 // var name = "Fauzi"
 
 // var name = "Firyal"
-// name = "Fauzi"
+// name = "Fauzi" 
 
 /*
 //Truthy and falsy Values
@@ -255,6 +255,7 @@ if(hasDriverLicense && hasGoodVision && !isTired){
 
 */
 
+/*
 //The switch Statement
 const day = 'thursday';
 
@@ -297,3 +298,39 @@ if( day === 'monday'){
 }else{
   console.log("Not a valid day!!");
 }
+
+//result is learn about Equality Operator and Switch Statement
+*/
+
+/*
+//Statement
+3 + 4
+1991
+true && false && !false
+
+//Expressions
+if (23 > 10){
+  const str = '23 is bigger';
+}
+
+const me = 'firyal';
+console.log(`I'm ${2037 - 2002} years old ${me}`);
+
+
+// The Conditional (Ternary) Operator
+const age = 23;
+// age >= 18 ? console.log('I like to drink honey') : console.log('I like to drink water');
+
+const drink = age >= 18 ? "honey" : "water";
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+  drink2 = "honey";
+} else {
+  drink2 = 'water';
+}
+console.log(drink2);
+console.log(`I like to drink ${age >= 18 ? "honey" : "water"}`);
+*/
+
