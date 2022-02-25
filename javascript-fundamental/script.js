@@ -1,4 +1,3 @@
-/*
 let js = "amazing";
 if (js === "amazing") alert("JavaScript is FUN!");
 
@@ -7,9 +6,7 @@ console.log(40 + 3 - 19 + 43);
 
 let firstName = "firyal";
 console.log(firstName);
-*/
 
-/*
 // variable cannot start with number, symbol (except for $ and _), UpperCase
 // Variables are containers for storing data (storing data values).
 
@@ -24,9 +21,6 @@ let job1 = "teacher";
 let job2 = "programmer";
 console.log(myFirstJob);
 
-*/
-
-/*
 // Data Types
 let javascriptIsFun = true;
 console.log(javascriptIsFun);
@@ -34,7 +28,7 @@ console.log(javascriptIsFun);
 console.log(typeof javascriptIsFun);
 // console.log(typeof 23);
 // console.log(typeof 'Firyal');
-javascriptIsFun = 'YES!';
+javascriptIsFun = "YES!";
 console.log(typeof javascriptIsFun);
 let year;
 console.log(year);
@@ -42,9 +36,7 @@ console.log(typeof year);
 year = 1991;
 console.log(typeof year);
 console.log(typeof null);
-*/
 
-/*
 // let, const and var
 
 // variable declaration
@@ -62,13 +54,11 @@ const birthYear = 2002;
 // function/locally scoped
 // The scope is global when a var variable is declared outside a function. This means that any variable that is declared with var outside a function block is available for use in the whole window.
 // var variables can be re-declared and updated
-var job = 'programmer';
-job = 'teacher'
-lastName = 'Huwaida';
+var job = "programmer";
+job = "teacher";
+lastName = "Huwaida";
 console.log(lastName);
-*/
 
-/*
 // Basic Operators
 // Math operators
 const now = 2037;
@@ -78,9 +68,9 @@ console.log(ageFiryal, ageIlyas);
 console.log(ageFiryal * 2, ageFiryal / 10, 2 ** 3);
 // 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2
 
-const firstName = 'Firyal';
-const lastName = 'Huwaida';
-console.log(firstName + ' ' + lastName);
+const firstName = "Firyal";
+const lastName = "Huwaida";
+console.log(firstName + " " + lastName);
 
 // Assignment operators
 let x = 10 + 5; // 15
@@ -90,18 +80,14 @@ x++; // x = x + 1
 x--;
 x--;
 console.log(x);
-*/
 
-/*
 // Comparison operators
 // >, <, >=, <=
 console.log(ageFiryal > ageIlyas); //true
 console.log(ageIlyas >= 18); //true
 const isFullAge = ageIlyas >= 18; //true
 console.log(now - 2002 > now - 2018); // true
-*/
 
-/*
 // Operator Precedence
 const now = 2037;
 const ageFiryal = now - 2002;
@@ -112,30 +98,27 @@ x = y = 25 - 10 - 5; // x = y = 10, x = 10
 console.log(x, y);
 const averageAge = (ageFiryal + ageIlyas) / 2;
 console.log(ageFiryal, ageIlyas, averageAge);
-*/
 
-/*
 //Strings and Template Literals
-const firstName = 'Firyal'
-const job = 'Software Engineer'
-const birthYear = 2002
-const year = 2022
+const firstName = "Firyal";
+const job = "Software Engineer";
+const birthYear = 2002;
+const year = 2022;
 
-const firyal = "I'm " + firstName + ', a ' + (year - birthYear) + ' years old ' + job + '!'
-console.log(firyal)
+const firyal =
+  "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+console.log(firyal);
 
 //instead of write string one by one, just use ``
-const firyalNew = `I'm ${firstName}, a ${year - birthYear} years old ${job} !`
-console.log(firyalNew)
+const firyalNew = `I'm ${firstName}, a ${year - birthYear} years old ${job} !`;
+console.log(firyalNew);
 
-console.log("String with \n\ multiple \n\ lines")
+console.log("String with \n multiple \n lines");
 
 console.log(`String with 
 multiple 
-lines`) 
-*/
+lines`);
 
-/*
 //Taking decesions: if else Statement
 const age = 15;
 
@@ -155,7 +138,6 @@ if (birthYear <= 2000) {
   century = 21;
 }
 console.log(century);
-*/
 
 // var x = 5;
 // var y = 6;
@@ -173,149 +155,135 @@ console.log(century);
 // var name = "Fauzi"
 
 // var name = "Firyal"
-// name = "Fauzi" 
+// name = "Fauzi"
 
-/*
 //Truthy and falsy Values
 //5 falsy values: 0, '', undefined, null, Nan
-console.log(Boolean(0)) // false
-console.log(Boolean(undefined)) //false
-console.log(Boolean('Firyal')) //true
-console.log(Boolean({})) // true
-console.log(Boolean('')) // false
+console.log(Boolean(0)); // false
+console.log(Boolean(undefined)); //false
+console.log(Boolean("Firyal")); //true
+console.log(Boolean({})); // true
+console.log(Boolean("")); // false
 
-const money = 100
-if(money){
-  console.log(`Dont spend it all`)
-}else{
-  console.log(`You should get a job!`)
+const money = 100;
+if (money) {
+  console.log(`Dont spend it all`);
+} else {
+  console.log(`You should get a job!`);
 }
 // result : Dont spend it all
 
-let height = 0
-if(height){
-  console.log('yay Heigh is defined')
-}else{
-  console.log('Height is Undefined')
+let height = 0;
+if (height) {
+  console.log("yay Heigh is defined");
+} else {
+  console.log("Height is Undefined");
 }
 //result : Height is Undefined
-*/
 
-
-/*
 //equality Operators: == vs ===
-const age = '18'
-if(age === 18) console.log(`You just became an adult (strict)`)
-if(age == 18) console.log(`You just become an adult(loose)`)
+const age = "18";
+if (age === 18) console.log(`You just became an adult (strict)`);
+if (age == 18) console.log(`You just become an adult(loose)`);
 
-const favourite = Number(prompt(`What's your favourite numbr?`))
-console.log(favourite)
-console.log(typeof favourite)
+const favourite = Number(prompt(`What's your favourite numbr?`));
+console.log(favourite);
+console.log(typeof favourite);
 
-if(favourite === 23) {
-  console.log(`Cool 23 is amazing number`)
-} else if(favourite === 7){
-  console.log(`7 is also a cool number`)
-} else if(favourite === 9){
-  console.log(`9 is also a cool number`)
+if (favourite === 23) {
+  console.log(`Cool 23 is amazing number`);
+} else if (favourite === 7) {
+  console.log(`7 is also a cool number`);
+} else if (favourite === 9) {
+  console.log(`9 is also a cool number`);
 } else {
-  console.log(`Number is not 23 or 7 or 9`)
+  console.log(`Number is not 23 or 7 or 9`);
 }
 
-if(favourite !== 23) console.log(`Why not 23?`)
+if (favourite !== 23) console.log(`Why not 23?`);
 
-
-*/
-
-/*
 //Logical Operators
-const hasDriverLicense = true //A
-const hasGoodVision = true //B
+const hasDriverLicense = true; //A
+const hasGoodVision = true; //B
 
-console.log(hasDriverLicense && hasGoodVision) // true
-console.log(hasDriverLicense || hasGoodVision) // true
-console.log(!hasDriverLicense) // false
+console.log(hasDriverLicense && hasGoodVision); // true
+console.log(hasDriverLicense || hasGoodVision); // true
+console.log(!hasDriverLicense); // false
 
-if(hasDriverLicense && hasGoodVision){
-  console.log('Firyal is able to drive')
+if (hasDriverLicense && hasGoodVision) {
+  console.log("Firyal is able to drive");
 } else {
-  console.log('someone else should drive')
+  console.log("someone else should drive");
 }
 //result : Firyal is able to drive
 
-const isTired = true 
-console.log(hasDriverLicense && hasGoodVision && isTired)
+const isTired = true;
+console.log(hasDriverLicense && hasGoodVision && isTired);
 
-if(hasDriverLicense && hasGoodVision && !isTired){
-  console.log('Firyal is able to drive')
-}else{
-  console.log('Someone else should drive')
+if (hasDriverLicense && hasGoodVision && !isTired) {
+  console.log("Firyal is able to drive");
+} else {
+  console.log("Someone else should drive");
 }
 //result : Someone else should Drive
 
-*/
-
-/*
 //The switch Statement
-const day = 'thursday';
+const day = "thursday";
 
 switch (day) {
-  case 'monday':
-    console.log('Learn about variable and values');
-    console.log('learn about let const and var');
+  case "monday":
+    console.log("Learn about variable and values");
+    console.log("learn about let const and var");
     break;
-  case 'tuesday':
-    console.log('Learn about data types and operator')
+  case "tuesday":
+    console.log("Learn about data types and operator");
     break;
-  case 'wednesday':
-    console.log('Learn about Statement if else')
-    console.log('Learn about Boolean')
+  case "wednesday":
+    console.log("Learn about Statement if else");
+    console.log("Learn about Boolean");
     break;
-  case 'thursday':
-  case 'friday':
-    console.log('learn about Equality Operator and Switch Statement')
+  case "thursday":
+  case "friday":
+    console.log("learn about Equality Operator and Switch Statement");
     break;
-  case 'saturday':
-  case 'sunday':
-    console.log('Enjoy the wekeend!!')
+  case "saturday":
+  case "sunday":
+    console.log("Enjoy the wekeend!!");
     break;
   default:
-    console.log('Not a valid day!!')
+    console.log("Not a valid day!!");
 }
 
-if( day === 'monday'){
-  console.log("Learn about variable and values")
-  console.log("learn about let const and var")
-} else if(day === 'tuesday' ){
-  console.log("Learn about data types and operator")
-}else if(day === 'wednesday'){
+if (day === "monday") {
+  console.log("Learn about variable and values");
+  console.log("learn about let const and var");
+} else if (day === "tuesday") {
+  console.log("Learn about data types and operator");
+} else if (day === "wednesday") {
   console.log("Learn about Statement if else");
   console.log("Learn about Boolean");
-}else if(day === 'thursday' || day === 'friday'){
+} else if (day === "thursday" || day === "friday") {
   console.log("learn about Equality Operator and Switch Statement");
-}else if(day === 'saturday' || day === 'sunday'){
+} else if (day === "saturday" || day === "sunday") {
   console.log("Enjoy the wekeend!!");
-}else{
+} else {
   console.log("Not a valid day!!");
 }
 
 //result is learn about Equality Operator and Switch Statement
-*/
 
-/*
 //Statement
-3 + 4
-1991
-true && false && !false
+3 + 4;
+1991;
+true && false && !false;
 
 //Expressions
-if (23 > 10){
-  const str = '23 is bigger';
+if (23 > 10) {
+  const str = "23 is bigger";
 }
 
-const me = 'firyal';
+const me = "firyal";
 console.log(`I'm ${2037 - 2002} years old ${me}`);
-
 
 // The Conditional (Ternary) Operator
 const age = 23;
@@ -328,9 +296,7 @@ let drink2;
 if (age >= 18) {
   drink2 = "honey";
 } else {
-  drink2 = 'water';
+  drink2 = "water";
 }
 console.log(drink2);
 console.log(`I like to drink ${age >= 18 ? "honey" : "water"}`);
-*/
-
