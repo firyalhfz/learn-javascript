@@ -14,7 +14,7 @@ TEST DATA 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
 
 const calcAverage = (score1, score2, score3) => score1 + score2 + score3 / 3;
 const scoreDolphins = calcAverage(85, 54, 41);
-const scoreKoalas = calcAverage(23, 34, 27);
+const scoreKoalas = calcAverage(23, 34, 32);
 console.log(scoreDolphins, scoreKoalas);
 
 function checkWinner(avrDolphins, avrKoalas) {
@@ -29,3 +29,5 @@ function checkWinner(avrDolphins, avrKoalas) {
   }
 }
 checkWinner(scoreDolphins, scoreKoalas);
+
+//Coding Challenge #2

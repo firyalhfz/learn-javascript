@@ -89,18 +89,18 @@ console.log(fruitProcessor(4, 10));
 const calcAge = function (birthYear) {
   return 2022 - birthYear;
 };
-const yearsUntilRetirement2 = function(birthYear, firstName){
+const yearsUntilRetirement2 = function (birthYear, firstName) {
   const age = calcAge(birthYear);
   const retirement = 65 - age;
 
-  if(retirement > 0){
+  if (retirement > 0) {
     console.log(`${firstName} retires in ${retirement} years`);
     return retirement;
   } else {
     console.log(`${firstName} has already retired yey`);
     return -1;
   }
-}
+};
 //if we call the function run what we return
 console.log(yearsUntilRetirement2(2002, "Firyal"));
 console.log(yearsUntilRetirement2(1995, "Elina"));
@@ -113,5 +113,60 @@ Elina retires in 38 years
 38
 */
 
+//Array
+const friend1 = "eren";
+const friend2 = "mikasa";
+const friend3 = "armin";
+const friends = ["eren", "mikasa", "armin"];
+console.log(friends);
+//result : (3) ['eren', 'mikasa', 'armin']
 
+//Array function
+const y = new Array(2004, 2003, 2002, 2001);
 
+console.log(friends[0]);
+console.log(friends[1]);
+console.log(friends[2]);
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+/*result
+eren
+mikasa
+armin
+3
+armin
+ */
+
+friends[0] = "head";
+console.log(friends);
+//result : (3) ['head', 'mikasa', 'armin']
+
+const firstName = "Levi";
+const levi = [firstName, 'Attack on titan', 2022 - 1998, 'survey corps', friends];
+console.log(levi);
+console.log(levi.length);
+
+/*
+result :
+(5) ['Levi', 'Attack on titan', 26, 'survey corps', Array(3)]
+5
+*/
+
+//Exercise
+const calcAgee = function (birthYear){
+  return 2022 - birthYear
+}
+
+const yearss = [1998, 2001, 2000, 2002];
+const ageLevi = calcAgee(yearss[0]);
+const ageMikasa = calcAgee(yearss[1]);
+const ageEren = calcAgee(yearss[2]);
+const ageArmin = calcAgee(yearss[3]);
+const agee = calcAgee(yearss[yearss.length - 1]);
+console.log(ageLevi, ageEren, ageMikasa, ageArmin, agee);
+//result : 24 22 21 20 20
+
+const ages = [calcAgee(yearss[0]), calcAgee(yearss[yearss.length - 1])];
+console.log(ages);
+//result : 24, 20
