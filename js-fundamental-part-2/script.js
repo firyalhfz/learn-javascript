@@ -158,15 +158,65 @@ const calcAgee = function (birthYear){
   return 2022 - birthYear
 }
 
-const yearss = [1998, 2001, 2000, 2002];
+const yearss = [1992, 2001, 2000, 2002];
 const ageLevi = calcAgee(yearss[0]);
 const ageMikasa = calcAgee(yearss[1]);
 const ageEren = calcAgee(yearss[2]);
 const ageArmin = calcAgee(yearss[3]);
 const agee = calcAgee(yearss[yearss.length - 1]);
 console.log(ageLevi, ageEren, ageMikasa, ageArmin, agee);
-//result : 24 22 21 20 20
+//result : 30 22 21 20 20
 
 const ages = [calcAgee(yearss[0]), calcAgee(yearss[yearss.length - 1])];
 console.log(ages);
-//result : 24, 20
+//result : 30, 20
+
+//Basic Array Operations (Methods)
+const besties = ['sasha', 'mikasa', 'armin', 'jean', 'connie', 'annie', 'bertolt', 'reiner', 'thomas'];
+
+//add element 
+//in the end
+const newLength = besties.push('historia'); 
+console.log(besties);
+console.log(newLength);
+
+//in the beginning
+besties.unshift('Ymir');
+console.log(besties);
+
+//remove elements
+//last
+besties.pop();
+const popped = besties.pop(); // we put the element that removed into variable
+console.log(popped);
+console.log(besties);
+
+//first
+besties.shift();
+console.log(besties);
+
+//check what is the index of the element
+console.log(besties.indexOf('eren'));
+console.log(besties.indexOf('mikasa'));
+
+//check if exist will be true, else false
+console.log(besties.includes('eren'));
+console.log(besties.includes('mikasa'));
+
+if(besties.includes('eren')){
+  console.log('eren still alive');
+}
+
+/*
+The result will be
+(10) ['sasha', 'mikasa', 'armin', 'jean', 'connie', 'annie', 'bertolt', 'reiner', 'thomas', 'historia']
+10
+(11) ['Ymir', 'sasha', 'mikasa', 'armin', 'jean', 'connie', 'annie', 'bertolt', 'reiner', 'thomas', 'historia']
+thomas
+['Ymir', 'sasha', 'mikasa', 'armin', 'jean', 'connie', 'annie', 'bertolt', 'reiner']
+['sasha', 'mikasa', 'armin', 'jean', 'connie', 'annie', 'bertolt', 'reiner']
+-1
+1
+false
+true
+*/
