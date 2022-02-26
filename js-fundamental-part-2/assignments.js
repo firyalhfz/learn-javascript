@@ -13,22 +13,19 @@ TEST DATA 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
 */
 
 const calcAverage = (score1, score2, score3) => score1 + score2 + score3 / 3;
-const averageDolphins = calcAverage(85, 54, 41);
-const averageKoalas = calcAverage(23, 34, 27);
-console.log(averageDolphins, averageKoalas);
-
-function totalAverage() {
-  const total = averageDolphins + averageKoalas;
-  console.log(total);
-}
+const scoreDolphins = calcAverage(85, 54, 41);
+const scoreKoalas = calcAverage(23, 34, 27);
+console.log(scoreDolphins, scoreKoalas);
 
 function checkWinner(avrDolphins, avrKoalas) {
-  if (averageDolphins >= 2 * averageKoalas) {
-    console.log(`Dolphins win with average scores ${avrDolphins} vs ${avrKoalas}`);
-  } else if (averageKoalas >= 2 * averageDolphins) {
-    console.log(`Koalas win with average score ${avrKoalas} vs ${avrDolphins}`);
+  if (avrDolphins >= 2 * avrKoalas) {
+    console.log(
+      `Dolphins win with average scores ${avrDolphins} vs ${avrKoalas}`
+    );
+  } else if (avrKoalas >= 2 * avrDolphins) {
+    console.log(`Koalas win with average scores ${avrKoalas} vs ${avrDolphins}`);
   } else {
-    console.log(`no one win`)
+    console.log(`no one win`);
   }
 }
-checkWinner(averageDolphins, averageKoalas);
+checkWinner(scoreDolphins, scoreKoalas);
