@@ -220,3 +220,59 @@ thomas
 false
 true
 */
+
+//Introduction to objects
+//array 
+const erenArray = [
+  'Eren', 'Yeager', 2019 - 2000, 'titan perintis', ['Mikasa', 
+  'Armin', 'Jean', 'Sasha'],
+];
+
+//object, can specify the value with the namekey
+const eren = {
+  firstName: 'Eren',
+  lastName: 'Yeager', 
+  age: 2019 - 2000,
+  job: 'titan perintis', 
+  friends: ['Mikasa', 'Armin', 'Jean', 'Sasha'],
+};
+
+//Dot vs Bracket Notation
+const eren = {
+  firstName: 'Eren',
+  lastName: 'Yeager', 
+  age: 2019 - 2000,
+  job: 'titan perintis', 
+  friends: ['Mikasa', 'Armin', 'Jean', 'Sasha'],
+}
+
+console.log(eren);
+console.log(eren.lastName);
+console.log(eren['lastName']);
+const nameKey = "Name";
+console.log(eren["firts" + nameKey]);
+console.log(eren["last" + nameKey]);
+
+//error
+//console.log(eren.'last' + nameKey);
+
+const interestedIn = prompt(
+  "what do you want to know about eren? Choose between firstName, lastName, age, job, friends"
+);
+
+if(eren[interestedIn]){
+  console.log(eren[interestedIn]);
+}else {
+  console.log(
+    "wrong request! Choose between firstName, lastName, age, job, and friends"
+  );
+}
+
+eren.location = "Paradis";
+eren['activity'] = "Rumbling";
+console.log(eren);
+
+//challenge 
+//eren has many friends, and his best friend is called Mikasa
+
+console.log(`${eren.firstName} has ${eren.friends.length} friends, and his best friend is called ${eren.friends[0]}`);
