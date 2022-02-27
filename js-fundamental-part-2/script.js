@@ -229,13 +229,13 @@ const erenArray = [
 ];
 
 //object, can specify the value with the namekey
-const eren = {
-  firstName: 'Eren',
-  lastName: 'Yeager', 
-  age: 2019 - 2000,
-  job: 'titan perintis', 
-  friends: ['Mikasa', 'Armin', 'Jean', 'Sasha'],
-};
+// const eren = {
+//   firstName: 'Eren',
+//   lastName: 'Yeager', 
+//   age: 2019 - 2000,
+//   job: 'titan perintis', 
+//   friends: ['Mikasa', 'Armin', 'Jean', 'Sasha'],
+// };
 
 //Dot vs Bracket Notation
 const eren = {
@@ -276,3 +276,41 @@ console.log(eren);
 //eren has many friends, and his best friend is called Mikasa
 
 console.log(`${eren.firstName} has ${eren.friends.length} friends, and his best friend is called ${eren.friends[0]}`);
+
+
+//Object Methods 
+const naruto = {
+  firstName: 'Naruto',
+  lastName: 'Uzumaki', 
+  birthYear: '1992',
+  job: 'Hokage', 
+  friends: ['Sasuke', 'Sakura', 'Gaara', 'Shikamaru', 'Choji', 'Neji'], 
+  hasKurama: true,
+
+  // calcAge: function (birthYear){
+  //   return 2022 - birthYear;
+  // }
+
+  // calcAge: function(){
+  //   console.log(this);
+  //   return 2022 - this.birthYear;
+  // }
+
+  calcAge: function(){
+    this.age = 2022 - this.birthYear;
+    return this.age;
+  },
+  getSummary: function(){
+    return `${this.firstName} is a ${this.calcAge()}-years old ${naruto.job}, and he has ${this.hasKurama ? 'a' : 'no'} Kurama.`;
+  }
+}
+
+console.log(naruto.calcAge());
+console.log(naruto.age);
+console.log(naruto.age);
+console.log(naruto.age);
+
+//challenge
+// "Naruto is a 30-years old hokage, and he has a kurama"
+console.log(naruto.getSummary());
+
