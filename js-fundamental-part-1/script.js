@@ -1,24 +1,24 @@
-let js = "amazing";
-if (js === "amazing") alert("JavaScript is FUN!");
+let js = 'amazing';
+if (js === 'amazing') alert('JavaScript is FUN!');
 
 // 40 + 3 - 19 + 43;
 console.log(40 + 3 - 19 + 43);
 
-let firstName = "firyal";
+let firstName = 'firyal';
 console.log(firstName);
 
 // variable cannot start with number, symbol (except for $ and _), UpperCase
 // Variables are containers for storing data (storing data values).
 
 // Variable name conventions
-let firyal_huwaida = "FH";
+let firyal_huwaida = 'FH';
 let $function = 27;
-let person = "firyal";
+let person = 'firyal';
 let PI = 3.1415;
-let myFirstJob = "Teacher";
-let myCurrentJob = "Coder";
-let job1 = "teacher";
-let job2 = "programmer";
+let myFirstJob = 'Teacher';
+let myCurrentJob = 'Coder';
+let job1 = 'teacher';
+let job2 = 'programmer';
 console.log(myFirstJob);
 
 // Data Types
@@ -28,7 +28,7 @@ console.log(javascriptIsFun);
 console.log(typeof javascriptIsFun);
 // console.log(typeof 23);
 // console.log(typeof 'Firyal');
-javascriptIsFun = "YES!";
+javascriptIsFun = 'YES!';
 console.log(typeof javascriptIsFun);
 let year;
 console.log(year);
@@ -54,9 +54,9 @@ const birthYear = 2002;
 // function/locally scoped
 // The scope is global when a var variable is declared outside a function. This means that any variable that is declared with var outside a function block is available for use in the whole window.
 // var variables can be re-declared and updated
-var job = "programmer";
-job = "teacher";
-lastName = "Huwaida";
+var job = 'programmer';
+job = 'teacher';
+lastName = 'Huwaida';
 console.log(lastName);
 
 // Basic Operators
@@ -68,9 +68,9 @@ console.log(ageFiryal, ageIlyas);
 console.log(ageFiryal * 2, ageFiryal / 10, 2 ** 3);
 // 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2
 
-const firstName = "Firyal";
-const lastName = "Huwaida";
-console.log(firstName + " " + lastName);
+const firstName = 'Firyal';
+const lastName = 'Huwaida';
+console.log(firstName + ' ' + lastName);
 
 // Assignment operators
 let x = 10 + 5; // 15
@@ -100,20 +100,20 @@ const averageAge = (ageFiryal + ageIlyas) / 2;
 console.log(ageFiryal, ageIlyas, averageAge);
 
 //Strings and Template Literals
-const firstName = "Firyal";
-const job = "Software Engineer";
+const firstName = 'Firyal';
+const job = 'Software Engineer';
 const birthYear = 2002;
 const year = 2022;
 
 const firyal =
-  "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+  "I'm " + firstName + ', a ' + (year - birthYear) + ' years old ' + job + '!';
 console.log(firyal);
 
 //instead of write string one by one, just use ``
 const firyalNew = `I'm ${firstName}, a ${year - birthYear} years old ${job} !`;
 console.log(firyalNew);
 
-console.log("String with \n multiple \n lines");
+console.log('String with \n multiple \n lines');
 
 console.log(`String with 
 multiple 
@@ -123,7 +123,7 @@ lines`);
 const age = 15;
 
 if (age >= 18) {
-  console.log("Firyal can start driving license");
+  console.log('Firyal can start driving license');
 } else {
   const yearsLeft = 18 - age;
   console.log(`Firyal is too young. Wait another ${yearsLeft} years`);
@@ -161,9 +161,9 @@ console.log(century);
 //5 falsy values: 0, '', undefined, null, Nan
 console.log(Boolean(0)); // false
 console.log(Boolean(undefined)); //false
-console.log(Boolean("Firyal")); //true
+console.log(Boolean('Firyal')); //true
 console.log(Boolean({})); // true
-console.log(Boolean("")); // false
+console.log(Boolean('')); // false
 
 const money = 100;
 if (money) {
@@ -175,14 +175,14 @@ if (money) {
 
 let height = 0;
 if (height) {
-  console.log("yay Heigh is defined");
+  console.log('yay Heigh is defined');
 } else {
-  console.log("Height is Undefined");
+  console.log('Height is Undefined');
 }
 //result : Height is Undefined
 
 //equality Operators: == vs ===
-const age = "18";
+const age = '18';
 if (age === 18) console.log(`You just became an adult (strict)`);
 if (age == 18) console.log(`You just become an adult(loose)`);
 
@@ -211,9 +211,9 @@ console.log(hasDriverLicense || hasGoodVision); // true
 console.log(!hasDriverLicense); // false
 
 if (hasDriverLicense && hasGoodVision) {
-  console.log("Firyal is able to drive");
+  console.log('Firyal is able to drive');
 } else {
-  console.log("someone else should drive");
+  console.log('someone else should drive');
 }
 //result : Firyal is able to drive
 
@@ -221,53 +221,53 @@ const isTired = true;
 console.log(hasDriverLicense && hasGoodVision && isTired);
 
 if (hasDriverLicense && hasGoodVision && !isTired) {
-  console.log("Firyal is able to drive");
+  console.log('Firyal is able to drive');
 } else {
-  console.log("Someone else should drive");
+  console.log('Someone else should drive');
 }
 //result : Someone else should Drive
 
 //The switch Statement
-const day = "thursday";
+const day = 'thursday';
 
 switch (day) {
-  case "monday":
-    console.log("Learn about variable and values");
-    console.log("learn about let const and var");
+  case 'monday':
+    console.log('Learn about variable and values');
+    console.log('learn about let const and var');
     break;
-  case "tuesday":
-    console.log("Learn about data types and operator");
+  case 'tuesday':
+    console.log('Learn about data types and operator');
     break;
-  case "wednesday":
-    console.log("Learn about Statement if else");
-    console.log("Learn about Boolean");
+  case 'wednesday':
+    console.log('Learn about Statement if else');
+    console.log('Learn about Boolean');
     break;
-  case "thursday":
-  case "friday":
-    console.log("learn about Equality Operator and Switch Statement");
+  case 'thursday':
+  case 'friday':
+    console.log('learn about Equality Operator and Switch Statement');
     break;
-  case "saturday":
-  case "sunday":
-    console.log("Enjoy the wekeend!!");
+  case 'saturday':
+  case 'sunday':
+    console.log('Enjoy the wekeend!!');
     break;
   default:
-    console.log("Not a valid day!!");
+    console.log('Not a valid day!!');
 }
 
-if (day === "monday") {
-  console.log("Learn about variable and values");
-  console.log("learn about let const and var");
-} else if (day === "tuesday") {
-  console.log("Learn about data types and operator");
-} else if (day === "wednesday") {
-  console.log("Learn about Statement if else");
-  console.log("Learn about Boolean");
-} else if (day === "thursday" || day === "friday") {
-  console.log("learn about Equality Operator and Switch Statement");
-} else if (day === "saturday" || day === "sunday") {
-  console.log("Enjoy the wekeend!!");
+if (day === 'monday') {
+  console.log('Learn about variable and values');
+  console.log('learn about let const and var');
+} else if (day === 'tuesday') {
+  console.log('Learn about data types and operator');
+} else if (day === 'wednesday') {
+  console.log('Learn about Statement if else');
+  console.log('Learn about Boolean');
+} else if (day === 'thursday' || day === 'friday') {
+  console.log('learn about Equality Operator and Switch Statement');
+} else if (day === 'saturday' || day === 'sunday') {
+  console.log('Enjoy the wekeend!!');
 } else {
-  console.log("Not a valid day!!");
+  console.log('Not a valid day!!');
 }
 
 //result is learn about Equality Operator and Switch Statement
@@ -279,24 +279,24 @@ true && false && !false;
 
 //Expressions
 if (23 > 10) {
-  const str = "23 is bigger";
+  const str = '23 is bigger';
 }
 
-const me = "firyal";
+const me = 'firyal';
 console.log(`I'm ${2037 - 2002} years old ${me}`);
 
 // The Conditional (Ternary) Operator
 const age = 23;
 // age >= 18 ? console.log('I like to drink honey') : console.log('I like to drink water');
 
-const drink = age >= 18 ? "honey" : "water";
+const drink = age >= 18 ? 'honey' : 'water';
 console.log(drink);
 
 let drink2;
 if (age >= 18) {
-  drink2 = "honey";
+  drink2 = 'honey';
 } else {
-  drink2 = "water";
+  drink2 = 'water';
 }
 console.log(drink2);
-console.log(`I like to drink ${age >= 18 ? "honey" : "water"}`);
+console.log(`I like to drink ${age >= 18 ? 'honey' : 'water'}`);

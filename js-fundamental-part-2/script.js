@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // //activating Strict Mode
 // let hasDriversLicense = false;
@@ -331,11 +331,11 @@ for (let rep = 1; rep <= 10; rep++) {
 
 //Looping Arrays, Breaking and continuing
 const eren = [
-  "Eren",
-  "Yeager",
+  'Eren',
+  'Yeager',
   2019 - 2000,
-  "titan perintis",
-  ["Mikasa", "Armin", "Jean", "Sasha"],
+  'titan perintis',
+  ['Mikasa', 'Armin', 'Jean', 'Sasha'],
 ];
 
 const types = [];
@@ -362,15 +362,15 @@ console.log(ages);
 
 //continue and break
 //continue is to exit the current iteration of the loop and continue to the next one.
-console.log("----- ONLY STRING ------");
+console.log('----- ONLY STRING ------');
 for (let i = 0; i < eren.length; i++) {
-  if (typeof eren[i] !== "string") continue;
+  if (typeof eren[i] !== 'string') continue;
   console.log(eren[i], typeof eren[i]);
 }
 //break is used to completely terminate the whole loop.
-console.log("----- BREAK WITH NUMBER ------");
+console.log('----- BREAK WITH NUMBER ------');
 for (let i = 0; i < eren.length; i++) {
-  if (typeof eren[i] === "number") break;
+  if (typeof eren[i] === 'number') break;
   console.log(eren[i], typeof eren[i]);
 }
 
@@ -411,25 +411,5 @@ let dice = Math.trunc(Math.random() * 6) + 1;
 while (dice !== 6) {
   console.log(`You rolled a ${dice}`);
   dice = Math.trunc(Math.random() * 6) + 1;
-  if(dice === 6) console.log('Loop is about to end....');
+  if (dice === 6) console.log('Loop is about to end....');
 }
-
-/*
-
-let's improve Steven's tip calculator even more, this time using loops
-1. Create an array 'bills' containing all 10 test bill values 
-2. Create empty arrays for the tips and the totals ('tips' and 'totals')
-3. Use the 'calcTip' function we wrote befote (no need to repeat) to calculate tips and total values (billl + tip)  for every bill value in the bills array. Use a for loop to perform the 10 calculations!
-TEST DATA: 22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
-HINT: call calcTip in the loop and use the push method to add values to the tips and totals arrays
-4. BONUS: Write a function 'calcAverage' which takes an arrat called 'arr' as an argument. This function calculates the average of all numbers in the given array. This is a DIFFICULT challenge (we havent done this before)! here is how to solve it:
-- First, you will need to add up all values in the array. To do the addition, start by creating a variable 'sum' that starts at 0.
-Then loop over the array using a fot loop. In each iteration, add the current value to the sum variable. This way, by the end of the loop, you have all values added together
-- To calculate the average, divide the sum you calculated before by the length of the array (because thats the number of elements)
-- Call the function with the totals array
-
-Goodluck ya ga ya
-
-*/
-
-
