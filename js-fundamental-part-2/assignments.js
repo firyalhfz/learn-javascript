@@ -23,7 +23,9 @@ function checkWinner(avrDolphins, avrKoalas) {
       `Dolphins win with average scores ${avrDolphins} vs ${avrKoalas}`
     );
   } else if (avrKoalas >= 2 * avrDolphins) {
-    console.log(`Koalas win with average scores ${avrKoalas} vs ${avrDolphins}`);
+    console.log(
+      `Koalas win with average scores ${avrKoalas} vs ${avrDolphins}`
+    );
   } else {
     console.log(`no one win`);
   }
@@ -39,7 +41,6 @@ Steven is still building his tip calculator, using the same rules as before: Tip
 4. BONUS: Create an array 'total' containing the total values, so the bill + tip.
 TEST DATA: 125, 555 and 44
 */
-
 
 const calcTip = function (bill) {
   return bill >= 50 && bill <= 300 ? bill * 0.2 : bill * 0.15;
@@ -66,8 +67,8 @@ GOOD LUCK 😀
 */
 
 const eren = {
-  firstName: "Eren",
-  lastName: "Yeager",
+  firstName: 'Eren',
+  lastName: 'Yeager',
   mass: 92,
   height: 1.95,
 
@@ -78,8 +79,8 @@ const eren = {
 };
 
 const mikasa = {
-  firstName: "Mikasa",
-  lastName: "Ackerman",
+  firstName: 'Mikasa',
+  lastName: 'Ackerman',
   mass: 78,
   height: 1.69,
 
@@ -91,10 +92,20 @@ const mikasa = {
 
 console.log(mikasa.calcBMI2(), eren.calcBMI());
 
-if(mikasa.calcBMI2() < eren.calcBMI()){
-  console.log(`${eren.firstName} ${eren.lastName}'s BMI (${eren.calcBMI()}) is higher than ${mikasa.firstName} ${mikasa.lastName}'s (${mikasa.calcBMI2()})  `)
-}else{
+if (mikasa.calcBMI2() < eren.calcBMI()) {
   console.log(
-    `${mikasa.firstName} ${mikasa.lastName}'s BMI (${mikasa.calcBMI2()}) is higher than ${eren.firstName} ${eren.lastName}'s BMI (${eren.calcBMI()})  `
+    `${eren.firstName} ${
+      eren.lastName
+    }'s BMI (${eren.calcBMI()}) is higher than ${mikasa.firstName} ${
+      mikasa.lastName
+    }'s (${mikasa.calcBMI2()})  `
+  );
+} else {
+  console.log(
+    `${mikasa.firstName} ${
+      mikasa.lastName
+    }'s BMI (${mikasa.calcBMI2()}) is higher than ${eren.firstName} ${
+      eren.lastName
+    }'s BMI (${eren.calcBMI()})  `
   );
 }

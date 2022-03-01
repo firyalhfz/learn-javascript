@@ -237,8 +237,8 @@ const erenArray = [
 //   friends: ['Mikasa', 'Armin', 'Jean', 'Sasha'],
 // };
 
-//Dot vs Bracket Notation
-const eren = {
+// Dot vs Bracket Notation
+const erenn = {
   firstName: 'Eren',
   lastName: 'Yeager',
   age: 2019 - 2000,
@@ -246,12 +246,12 @@ const eren = {
   friends: ['Mikasa', 'Armin', 'Jean', 'Sasha'],
 }
 
-console.log(eren);
-console.log(eren.lastName);
-console.log(eren['lastName']);
+console.log(erenn);
+console.log(erenn.lastName);
+console.log(erenn['lastName']);
 const nameKey = "Name";
-console.log(eren["firts" + nameKey]);
-console.log(eren["last" + nameKey]);
+console.log(erenn["firts" + nameKey]);
+console.log(erenn["last" + nameKey]);
 
 //error
 //console.log(eren.'last' + nameKey);
@@ -260,22 +260,22 @@ const interestedIn = prompt(
   "what do you want to know about eren? Choose between firstName, lastName, age, job, friends"
 );
 
-if(eren[interestedIn]){
-  console.log(eren[interestedIn]);
+if(erenn[interestedIn]){
+  console.log(erenn[interestedIn]);
 }else {
   console.log(
     "wrong request! Choose between firstName, lastName, age, job, and friends"
   );
 }
 
-eren.location = "Paradis";
-eren['activity'] = "Rumbling";
-console.log(eren);
+erenn.location = "Paradis";
+erenn['activity'] = "Rumbling";
+console.log(erenn);
 
 //challenge
 //eren has many friends, and his best friend is called Mikasa
 
-console.log(`${eren.firstName} has ${eren.friends.length} friends, and his best friend is called ${eren.friends[0]}`);
+console.log(`${erenn.firstName} has ${erenn.friends.length} friends, and his best friend is called ${erenn.friends[0]}`);
 
 //Object Methods
 const naruto = {
@@ -313,7 +313,7 @@ console.log(naruto.age);
 // "Naruto is a 30-years old hokage, and he has a kurama"
 console.log(naruto.getSummary());
 
-Iteration: The for loop
+// Iteration: The for loop
 console.log("Lifting weights repetition 1");
 console.log('Lifting weights repetition 2');
 console.log("Lifting weights repetition 3");
@@ -354,9 +354,9 @@ for (let i = 0; i < eren.length; i++) {
 console.log(types);
 
 const years = [2002, 2005, 2004, 1997];
-const ages = [];
+const agess = [];
 for (let i = 0; i < years.length; i++) {
-  ages.push(2027 - years[i]);
+  agess.push(2027 - years[i]);
 }
 console.log(ages);
 
