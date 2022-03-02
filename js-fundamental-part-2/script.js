@@ -5,13 +5,13 @@ let hasDriversLicense = false;
 const passTest = true;
 
 if (passTest) hasDriversLicense = true;
-if (hasDriversLicense) console.log("i can drive :D");
+if (hasDriversLicense) console.log('i can drive :D');
 // const interface = "audio";
 // const private = 534;
 
 //Function
 function logger() {
-  console.log("my name is Firyal");
+  console.log('my name is Firyal');
 }
 
 //calling / running / invoking function
@@ -32,7 +32,7 @@ console.log(orangeJuice);
 //result : Juice with 0 pears and 6 lychees.
 
 //function also
-const num = Number("23");
+const num = Number('23');
 
 //Function declarations vs Expression
 
@@ -52,7 +52,7 @@ console.log(age1, age2);
 // result : 20 20
 
 //Arrow Functions
-const calcAge3 = (birthYear) => 2022 - birthYear;
+const calcAge3 = birthYear => 2022 - birthYear;
 const age3 = calcAge3(2002);
 console.log(age3);
 // result : 20
@@ -63,8 +63,8 @@ const yearsUntilRetirement = (birthYear, firstName) => {
   //return retirement;
   return `${firstName} retires in ${retirement} years`;
 };
-console.log(yearsUntilRetirement(2002, "Firyal"));
-console.log(yearsUntilRetirement(1995, "Elina"));
+console.log(yearsUntilRetirement(2002, 'Firyal'));
+console.log(yearsUntilRetirement(1995, 'Elina'));
 /*
 result :
 Firyal retires in 45 years
@@ -102,8 +102,8 @@ const yearsUntilRetirement2 = function (birthYear, firstName) {
   }
 };
 //if we call the function run what we return
-console.log(yearsUntilRetirement2(2002, "Firyal"));
-console.log(yearsUntilRetirement2(1995, "Elina"));
+console.log(yearsUntilRetirement2(2002, 'Firyal'));
+console.log(yearsUntilRetirement2(1995, 'Elina'));
 
 /*
 result :
@@ -114,11 +114,15 @@ Elina retires in 38 years
 */
 
 //Array
-const friend1 = "eren";
-const friend2 = "mikasa";
-const friend3 = "armin";
-const friends = ["eren", "mikasa", "armin"];
+//not using array just variables
+const friend1 = 'eren';
+const friend2 = 'mikasa';
+const friend3 = 'armin';
+
+//use array
+const friends = ['eren', 'mikasa', 'armin'];
 console.log(friends);
+
 //result : (3) ['eren', 'mikasa', 'armin']
 
 //Array function
@@ -138,12 +142,18 @@ armin
 armin
  */
 
-friends[0] = "head";
+friends[0] = 'head';
 console.log(friends);
 //result : (3) ['head', 'mikasa', 'armin']
 
-const firstName = "Levi";
-const levi = [firstName, 'Attack on titan', 2022 - 1998, 'survey corps', friends];
+const firstName = 'Levi';
+const levi = [
+  firstName,
+  'Attack on titan',
+  2022 - 1998,
+  'survey corps',
+  friends,
+];
 console.log(levi);
 console.log(levi.length);
 
@@ -153,10 +163,14 @@ result :
 5
 */
 
+levi[3] = 'capten';
+console.log(levi);
+// (5)[('Levi', 'Attack on titan', 26, 'capten', Array(3))];
+
 //Exercise
-const calcAgee = function (birthYear){
-  return 2022 - birthYear
-}
+const calcAgee = function (birthYear) {
+  return 2022 - birthYear;
+};
 
 const yearss = [1992, 2001, 2000, 2002];
 const ageLevi = calcAgee(yearss[0]);
@@ -172,7 +186,17 @@ console.log(ages);
 //result : 30, 20
 
 //Basic Array Operations (Methods)
-const besties = ['sasha', 'mikasa', 'armin', 'jean', 'connie', 'annie', 'bertolt', 'reiner', 'thomas'];
+const besties = [
+  'sasha',
+  'mikasa',
+  'armin',
+  'jean',
+  'connie',
+  'annie',
+  'bertolt',
+  'reiner',
+  'thomas',
+];
 
 //add element
 //in the end
@@ -203,7 +227,7 @@ console.log(besties.indexOf('mikasa'));
 console.log(besties.includes('eren'));
 console.log(besties.includes('mikasa'));
 
-if(besties.includes('eren')){
+if (besties.includes('eren')) {
   console.log('eren still alive');
 }
 
@@ -224,18 +248,21 @@ true
 //Introduction to objects
 //array
 const erenArray = [
-  'Eren', 'Yeager', 2019 - 2000, 'titan perintis', ['Mikasa',
-  'Armin', 'Jean', 'Sasha'],
+  'Eren',
+  'Yeager',
+  2019 - 2000,
+  'titan perintis',
+  ['Mikasa', 'Armin', 'Jean', 'Sasha'],
 ];
 
-//object, can specify the value with the namekey
-// const eren = {
-//   firstName: 'Eren',
-//   lastName: 'Yeager',
-//   age: 2019 - 2000,
-//   job: 'titan perintis',
-//   friends: ['Mikasa', 'Armin', 'Jean', 'Sasha'],
-// };
+// object, can specify the value with the namekey
+const eren = {
+  firstName: 'Eren',
+  lastName: 'Yeager',
+  age: 2019 - 2000,
+  job: 'titan perintis',
+  friends: ['Mikasa', 'Armin', 'Jean', 'Sasha'],
+};
 
 // Dot vs Bracket Notation
 const erenn = {
@@ -244,38 +271,40 @@ const erenn = {
   age: 2019 - 2000,
   job: 'titan perintis',
   friends: ['Mikasa', 'Armin', 'Jean', 'Sasha'],
-}
+};
 
 console.log(erenn);
 console.log(erenn.lastName);
 console.log(erenn['lastName']);
-const nameKey = "Name";
-console.log(erenn["firts" + nameKey]);
-console.log(erenn["last" + nameKey]);
+const nameKey = 'Name';
+console.log(erenn['firts' + nameKey]);
+console.log(erenn['last' + nameKey]);
 
 //error
 //console.log(eren.'last' + nameKey);
 
 const interestedIn = prompt(
-  "what do you want to know about eren? Choose between firstName, lastName, age, job, friends"
+  'what do you want to know about eren? Choose between firstName, lastName, age, job, friends'
 );
 
-if(erenn[interestedIn]){
+if (erenn[interestedIn]) {
   console.log(erenn[interestedIn]);
-}else {
+} else {
   console.log(
-    "wrong request! Choose between firstName, lastName, age, job, and friends"
+    'wrong request! Choose between firstName, lastName, age, job, and friends'
   );
 }
 
-erenn.location = "Paradis";
-erenn['activity'] = "Rumbling";
+erenn.location = 'Paradis';
+erenn['activity'] = 'Rumbling';
 console.log(erenn);
 
 //challenge
 //eren has many friends, and his best friend is called Mikasa
 
-console.log(`${erenn.firstName} has ${erenn.friends.length} friends, and his best friend is called ${erenn.friends[0]}`);
+console.log(
+  `${erenn.firstName} has ${erenn.friends.length} friends, and his best friend is called ${erenn.friends[0]}`
+);
 
 //Object Methods
 const naruto = {
@@ -295,14 +324,16 @@ const naruto = {
   //   return 2022 - this.birthYear;
   // }
 
-  calcAge: function(){
+  calcAge: function () {
     this.age = 2022 - this.birthYear;
     return this.age;
   },
-  getSummary: function(){
-    return `${this.firstName} is a ${this.calcAge()}-years old ${naruto.job}, and he has ${this.hasKurama ? 'a' : 'no'} Kurama.`;
-  }
-}
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-years old ${
+      naruto.job
+    }, and he has ${this.hasKurama ? 'a' : 'no'} Kurama.`;
+  },
+};
 
 console.log(naruto.calcAge());
 console.log(naruto.age);
@@ -314,20 +345,33 @@ console.log(naruto.age);
 console.log(naruto.getSummary());
 
 // Iteration: The for loop
-console.log("Lifting weights repetition 1");
+//Instead of using this
+console.log('Lifting weights repetition 1');
 console.log('Lifting weights repetition 2');
-console.log("Lifting weights repetition 3");
-console.log("Lifting weights repetition 4");
-console.log("Lifting weights repetition 5");
-console.log("Lifting weights repetition 6");
-console.log("Lifting weights repetition 7");
-console.log("Lifting weights repetition 8");
-console.log("Lifting weights repetition 9");
+console.log('Lifting weights repetition 3');
+console.log('Lifting weights repetition 4');
+console.log('Lifting weights repetition 5');
+console.log('Lifting weights repetition 6');
+console.log('Lifting weights repetition 7');
+console.log('Lifting weights repetition 8');
+console.log('Lifting weights repetition 9');
 console.log('Lifting weights repetition 10');
 
+//use looping
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repetition ${rep}`);
 }
+
+// Lifting weights repetition 1
+// Lifting weights repetition 2
+// Lifting weights repetition 3
+// Lifting weights repetition 4
+// Lifting weights repetition 5
+// Lifting weights repetition 6
+// Lifting weights repetition 7
+// Lifting weights repetition 8
+// Lifting weights repetition 9
+// Lifting weights repetition 10
 
 //Looping Arrays, Breaking and continuing
 const eren = [
@@ -359,6 +403,7 @@ for (let i = 0; i < years.length; i++) {
   agess.push(2027 - years[i]);
 }
 console.log(ages);
+//result (4) [25, 22, 23, 30]
 
 //continue and break
 //continue is to exit the current iteration of the loop and continue to the next one.
@@ -375,13 +420,13 @@ for (let i = 0; i < eren.length; i++) {
 }
 
 //Looping backwards and loops in loops
-// const eren = [
-//   "Eren",
-//   "Yeager",
-//   2019 - 2000,
-//   "titan perintis",
-//   ["Mikasa", "Armin", "Jean", "Sasha"],
-// ];
+const eren = [
+  'Eren',
+  'Yeager',
+  2019 - 2000,
+  'titan perintis',
+  ['Mikasa', 'Armin', 'Jean', 'Sasha'],
+];
 
 //0, 1, ..., 4
 //4, 3, ..., 0
@@ -396,12 +441,33 @@ for (let exercise = 1; exercise < 4; exercise++) {
     console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}`);
   }
 }
+/*
+---------- Starting exercise 1
+Exercise 1: Lifting weight repetition 1
+Exercise 1: Lifting weight repetition 2
+Exercise 1: Lifting weight repetition 3
+Exercise 1: Lifting weight repetition 4
+Exercise 1: Lifting weight repetition 5
+---------- Starting exercise 2
+Exercise 2: Lifting weight repetition 1
+Exercise 2: Lifting weight repetition 2
+Exercise 2: Lifting weight repetition 3
+Exercise 2: Lifting weight repetition 4
+Exercise 2: Lifting weight repetition 5
+---------- Starting exercise 3
+Exercise 3: Lifting weight repetition 1
+Exercise 3: Lifting weight repetition 2
+Exercise 3: Lifting weight repetition 3
+Exercise 3: Lifting weight repetition 4
+Exercise 3: Lifting weight repetition 5 
+*/
 
-//the while loop
+//for loop
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repetition ${rep}`);
 }
 
+//while loop
 let rep = 1;
 while (rep <= 10) {
   rep++;

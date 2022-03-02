@@ -12,25 +12,25 @@ TEST DATA 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
 TEST DATA 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
 */
 
-const calcAverage = (score1, score2, score3) => score1 + score2 + score3 / 3;
-const scoreDolphins = calcAverage(85, 54, 41);
-const scoreKoalas = calcAverage(23, 34, 32);
-console.log(scoreDolphins, scoreKoalas);
+// const calcAverage = (score1, score2, score3) => score1 + score2 + score3 / 3;
+// const scoreDolphins = calcAverage(85, 54, 41);
+// const scoreKoalas = calcAverage(23, 34, 32);
+// console.log(scoreDolphins, scoreKoalas);
 
-function checkWinner(avrDolphins, avrKoalas) {
-  if (avrDolphins >= 2 * avrKoalas) {
-    console.log(
-      `Dolphins win with average scores ${avrDolphins} vs ${avrKoalas}`
-    );
-  } else if (avrKoalas >= 2 * avrDolphins) {
-    console.log(
-      `Koalas win with average scores ${avrKoalas} vs ${avrDolphins}`
-    );
-  } else {
-    console.log(`no one win`);
-  }
-}
-checkWinner(scoreDolphins, scoreKoalas);
+// function checkWinner(avrDolphins, avrKoalas) {
+//   if (avrDolphins >= 2 * avrKoalas) {
+//     console.log(
+//       `Dolphins win with average scores ${avrDolphins} vs ${avrKoalas}`
+//     );
+//   } else if (avrKoalas >= 2 * avrDolphins) {
+//     console.log(
+//       `Koalas win with average scores ${avrKoalas} vs ${avrDolphins}`
+//     );
+//   } else {
+//     console.log(`no one win`);
+//   }
+// }
+// checkWinner(scoreDolphins, scoreKoalas);
 
 //Coding Challenge #2
 /*
@@ -42,17 +42,17 @@ Steven is still building his tip calculator, using the same rules as before: Tip
 TEST DATA: 125, 555 and 44
 */
 
-const calcTip = function (bill) {
-  return bill >= 50 && bill <= 300 ? bill * 0.2 : bill * 0.15;
-};
-console.log(calcTip(100));
+// const calcTip = function (bill) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.2 : bill * 0.15;
+// };
+// console.log(calcTip(100));
 
-const bills = [125, 555, 44];
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-console.log(tips);
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// console.log(tips);
 
-const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
-console.log(total);
+// const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
+// console.log(total);
 
 ///////////////////////////////////////
 // Coding Challenge #3
@@ -128,31 +128,31 @@ HINT: Call calcTip in the loop and use the push method to add values to the tips
 GOOD LUCK 😀
 */
 
-let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-let tips = [];
-let totals = [];
+// let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// let tips = [];
+// let totals = [];
 
-const calcTip = function (bill) {
-  return bill >= 50 && bill <= 300 ? bill * 0.2 : bill * 0.15;
-};
+// const calcTip = function (bill) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.2 : bill * 0.15;
+// };
 
-for (let i = 0; i < bills.length; i++) {
-  const tip = calcTip(bills[i]);
-  tips.push(tip);
-  totals.push(tip + bills[i]);
-}
+// for (let i = 0; i < bills.length; i++) {
+//   const tip = calcTip(bills[i]);
+//   tips.push(tip);
+//   totals.push(tip + bills[i]);
+// }
 
-console.log(bills, tips, totals);
+// console.log(bills, tips, totals);
 
-const calcAverage = function (arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    // sum = sum + arr[i];
-    sum += arr[i];
-  }
-  // console.log(sum)
-  return sum / arr.length;
-};
+// const calcAverage = function (arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     // sum = sum + arr[i];
+//     sum += arr[i];
+//   }
+//   // console.log(sum)
+//   return sum / arr.length;
+// };
 
-console.log(calcAverage(totals));
-console.log(calcAverage(tips));
+// console.log(calcAverage(totals));
+// console.log(calcAverage(tips));
