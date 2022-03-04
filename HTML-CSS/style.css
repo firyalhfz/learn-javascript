@@ -1,0 +1,64 @@
+/* for selecting all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* giving style to body */
+body {
+  background-color: rgb(255, 247, 201);
+  font-family: Arial;
+  font-size: 20px;
+  padding: 50px;
+}
+
+/* giving style to h1 */
+h1 {
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+
+/* giving style to h1 */
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* giving style to p*/
+p {
+  margin-bottom: 20px;
+}
+
+/* giving the style by id */
+.first {
+  color: red;
+}
+
+
+/* giving the style by class */
+#your-name {
+  background-color: rgb(255, 220, 105);
+  border: 5px solid #444;
+  width: 400px;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+a {
+  background-color: yellowgreen;
+}
+
+#course-image {
+  width: 300px;
+}
+
+#your-name h2 {
+  color: olivedrab;
+}

@@ -23,14 +23,16 @@ TEST DATA 2: [12, 5, -5, 0, 4]
 
 const temp1 = [17, 21, 23];
 const temp2 = [12, 5, -5, 0, 4];
-console.log(`... ${temp1[0]}ºC ... ${temp1[1]}ºC ... ${temp1[2]}ºC ...`);
+console.log(`... ${temp1[0]}ºC ... ${temp1[1]}ºC ... ${temp1[2]}ºC ... `);
+
+
 const printForecast = function (arr) {
   let str = '';
   for (let i = 0; i < arr.length; i++) {
-    str += `${arr[i]}ºC in ${i + 1} days...`;
+    str += ` ${arr[i]}ºC in ${i + 1} days ... `;
   }
   console.log('...' + str);
 };
 
-printForecast(tempt1);
-printForecast(tempt2);
+printForecast(temp1);
+printForecast(temp2);
