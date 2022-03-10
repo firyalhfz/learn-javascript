@@ -54,7 +54,9 @@ document.addEventListener('keydown', function(e){
 // TODO1
 /* 
 we select an element using the selector, but then this time, we actually store the results of the selection so the selected element in this variable.
+
 the limitation of or query selector method here for the first time,  so whenever we use query selector with a selector, which actually matches multiple elements, only the first one will get selected. And so here, we need another one. But it's pretty similar. It's called query selectorAll. it will selected all elements
+
 We can selected all the show-modal. and to print it we can use for looping and print the textcontent. if we dont want to use {} its okay because there is only one line of code that will executed
 */
 
@@ -77,7 +79,7 @@ So working with classes is something that we do all the time. And there is a thi
 
 //TODO3
 /*
-So in order to listen for keyboard events,we still need to use add event listener. Because the key press event is simply just another type of event. Now, keyboard events are so-called global events because they do not happen on one specific element. And for global events like keyboard events we usually list and on the whole document.
+So in order to listen for keyboard events, we still need to use add event listener. Because the key press event is simply just another type of event. Now, keyboard events are so-called global events because they do not happen on one specific element. And for global events like keyboard events we usually list and on the whole document.
 
 on the document we are basically listening for events everywhere. So no matter where they happen on the page, they will always trigger the event handler that we're going to specify here.
 
