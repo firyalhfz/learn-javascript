@@ -81,19 +81,49 @@
 // }
 // calcAgeArrow(2002);
 
-//In case of regular function if you are not using strict mode​
-const age = function (birthYear) {
-  console.log(birthYear);
-  console.log(this);
-};
+// //In case of regular function if you are not using strict mode​
+// const age = function (birthYear) {
+//   console.log(birthYear);
+//   console.log(this);
+// };
 
-age(2022);
+// age(2022);
 
+// const firyal = {
+//   year: 2002,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2022 - this.year);
+//   },
+// };
+// firyal.calcAge(2002);
+
+//Arrow function inside the object
 const firyal = {
   year: 2002,
   calcAge: function () {
     console.log(this);
     console.log(2022 - this.year);
   },
+
+  //the example
+  greet: () => console.log(`Halo ${this.firstName}`),
 };
-firyal.calcAge(2002);
+firyal.greet();
+
+//Regular function inside the method
+const salwa = {
+  year: 2004,
+  calcAge: function () {
+    console.log(this);
+    console.log(2022 - this.year);
+
+    //the example
+    const isGenZ = function () {
+      console.log(this);
+      console.log(this.year >= 1990 && this.year <= 2010);
+    };
+    isGenZ();
+  },
+};
+salwa.calcAge();
