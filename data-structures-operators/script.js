@@ -18,7 +18,7 @@ const restaurant = {
   },
 };
 
-// TODO 1 
+// TODO 1
 const arr = [2, 3, 4];
 const a = arr[0];
 const b = arr[1];
@@ -30,11 +30,11 @@ console.log(x, y, z); // 2 3 4
 console.log(arr); // (3) [2, 3, 4]
 
 // take element from categories
-const[first, second] = restaurant.categories
+const [first, second] = restaurant.categories;
 console.log(first, second); // Italian Pizzeria
 
 // take element from categories the 1st and 3rd, just , and empty
-let [main, ,secondary] = restaurant.categories
+let [main, , secondary] = restaurant.categories;
 console.log(main, secondary); // Italian Vegetarian
 
 //Switching variable without destructuring
@@ -50,13 +50,21 @@ console.log(main, secondary); // Vegetarian Italian
 // TODO2
 // Desctructuring from function
 // Receive 2 return values from a function
-const [starter, mainCourse] = restaurant.order(2,0);
+const [starter, mainCourse] = restaurant.order(2, 0);
 console.log(starter, mainCourse); // Garlic Bread Pizza
 
+//Nested Destructuring
 //Destructuring inside the destructuring
 const nested = [2, 4, [5, 6]];
 //dont use destructuring
 // const [i, , j] = nested; // 2 (2) [5, 6]
 //using destructuring
-const [i, ,[j, k]] = nested; // 2 5 6
+const [i, , [j, k]] = nested; // 2 5 6
 console.log(i, j, k);
+
+// TODO3
+// Default Values
+const [p = 1, q = 1, r = 1] = [8, 9];
+console.log(p, q, r);
+//instead get undefined, we get 8 9 1. the r is 1 because we set the deafult values, it is will usefull later for example when we get data API.
+
