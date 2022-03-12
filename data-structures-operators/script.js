@@ -6,17 +6,11 @@
 
 // Data needed for first part of the section
 const restaurant = {
-  name: 'Rumah Makan Nasi Padang',
-  location: 'Jalan Soemawinata no 12, Merkurius',
-  categories: ['Lauk', 'Sayur', 'Nasi', 'Minuman'],
-  starterMenu: [
-    'Rendang',
-    'Ayam Pop',
-    'Ayam Bakar',
-    'Ikan Bakar',
-    'Telur Dadar',
-  ],
-  mainMenu: ['Sepaket Rendang', 'Sepaket Ayam Pop', 'Sepaket Telur Dadar'],
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
 };
 
@@ -33,18 +27,19 @@ console.log(arr); // (3) [2, 3, 4]
 
 // take element from categories
 const[first, second] = restaurant.categories
-console.log(first, second); //Lauk Sayur
+console.log(first, second); // Italian Pizzeria
 
 // take element from categories the 1st and 3rd, just , and empty
 let [main, ,secondary] = restaurant.categories
-console.log(main, secondary); //Lauk Nasi
+console.log(main, secondary); // Italian Vegetarian
 
-//without destructuring
+//Switching variable without destructuring
 // const temp = main;
 // main = secondary;
 // secondary = temp;
 // console.log(main, secondary);
 
-// use destructuring to change the position elements category
+// use destructuring to switching variablechange the position elements category
 [main, secondary] = [secondary, main];
-console.log(main, secondary);
+console.log(main, secondary); // Vegetarian Italian
+
