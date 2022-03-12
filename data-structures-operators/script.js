@@ -26,51 +26,86 @@ const restaurant = {
       close: 24,
     },
   },
+
   // TODO 2
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+
+  //TODO 5
+  // orderDelivery: function (obj){
+  //   console.log(obj);
+  // },
+  orderDelivery: function ({
+    starterIndex = 1,
+    time = '20:00',
+    mainIndex = 0,
+    address = 'mars'
+  }) {
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    );
+  },
 };
 
-// TODO 4
-// Destructuring Object
-const { name, openingHours, categories } = restaurant;
-console.log(name, openingHours, categories);
 
-// make the variable name different
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags,
-} = restaurant;
-console.log(restaurantName, hours, tags);
-/*
-Classico Italiano 
-{thu: {…}, fri: {…}, sat: {…}} 
-(4) ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']
+
+
+// TODO 5
+// pass object into the function as argument
+restaurant.orderDelivery({
+  time: '22:30',
+  address: 'Merkurius',
+  mainIndex: 2,
+  starterIndex: 1,
+});
+/**
+ * Order received! Bruschetta and Risotto will be delivered to Merkurius at 22:30
 */
+/**
+ * {time: '22:30', address: 'Merkurius', mainIndex: 2, starterIndex: 2}
+ */
 
-//Default values
-const { menu = [], starterMenu: starters = [] } = restaurant;
-console.log(menu, starters);
-/*
-[] (4) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
-*/
+// // TODO 4
+// // Destructuring Object
+// const { name, openingHours, categories } = restaurant;
+// console.log(name, openingHours, categories);
 
-//Mutating variables
-let a = 111;
-let b = 999;
-const obj = { a: 23, b: 7, c: 16 };
-({ a, b } = obj);
-console.log(a, b); // 23 7
+// // make the variable name different
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant;
+// console.log(restaurantName, hours, tags);
+// /*
+// Classico Italiano 
+// {thu: {…}, fri: {…}, sat: {…}} 
+// (4) ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']
+// */
 
+// //Default values
+// const { menu = [], starterMenu: starters = [] } = restaurant;
+// console.log(menu, starters);
+// /*
+// [] (4) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
+// */
 
-//Nested object
-const {fri} = openingHours;
-console.log(fri); // {open: 11, close: 23}
+// //Mutating variables
+// let a = 111;
+// let b = 999;
+// const obj = { a: 23, b: 7, c: 16 };
+// ({ a, b } = obj);
+// console.log(a, b); // 23 7
 
-const {sat: {open: o, close: c}} = openingHours;
-console.log(o, c); // 0, 24
+// //Nested object
+// const { fri } = openingHours;
+// console.log(fri); // {open: 11, close: 23}
+
+// const {
+//   sat: { open: o, close: c },
+// } = openingHours;
+// console.log(o, c); // 0, 24
 
 // // TODO 1
 // const arr = [2, 3, 4];
