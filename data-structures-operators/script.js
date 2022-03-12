@@ -48,23 +48,53 @@ const restaurant = {
   },
 };
 
+// TODO 6
+// The spread Operator (...)
 
+//not using the spread operator
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr); // (5) [1, 2, 7, 8, 9]
 
+//using spread operator
+const newArr = [1, 2, ...arr];
+console.log(newArr); // (5) [1, 2, 7, 8, 9]
 
-// TODO 5
-// pass object into the function as argument
-restaurant.orderDelivery({
-  time: '22:30',
-  address: 'Merkurius',
-  mainIndex: 2,
-  starterIndex: 1,
-});
-/**
- * Order received! Bruschetta and Risotto will be delivered to Merkurius at 22:30
-*/
-/**
- * {time: '22:30', address: 'Merkurius', mainIndex: 2, starterIndex: 2}
- */
+console.log(...newArr);
+console.log(1, 2, 7, 8, 9);
+
+// add food to mainMenu Array
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu); //(4) ['Pizza', 'Pasta', 'Risotto', 'Gnocci']
+
+// Copy Array
+const mainMenuCopy = [...restaurant.mainMenu];
+
+// join 2 arrays
+const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(menu); // (7) ['Pizza', 'Pasta', 'Risotto', 'Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
+
+//Iterables: arrays, strings, maps, sets, NOT objects
+const str = 'Firyal';
+const letters = [...str, '', 'l.'];
+console.log(letters); //(8) ['F', 'i', 'r', 'y', 'a', 'l', '', 'l.']
+console.log(...str); // F i r y a l
+// multiple values separated by a comma are usually only expected when we pass arguments into a function, or when we build a new array.
+
+// // TODO 5
+// // pass object into the function as argument
+// restaurant.orderDelivery({
+//   time: '22:30',
+//   address: 'Merkurius',
+//   mainIndex: 2,
+//   starterIndex: 1,
+// });
+// /**
+//  * Order received! Bruschetta and Risotto will be delivered to Merkurius at 22:30
+// */
+// /**
+//  * {time: '22:30', address: 'Merkurius', mainIndex: 2, starterIndex: 2}
+//  */
 
 // // TODO 4
 // // Destructuring Object
