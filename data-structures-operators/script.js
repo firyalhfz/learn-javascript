@@ -12,6 +12,10 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
+  // TODO 2
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
 };
 
 // TODO 1 
@@ -39,7 +43,20 @@ console.log(main, secondary); // Italian Vegetarian
 // secondary = temp;
 // console.log(main, secondary);
 
-// use destructuring to switching variablechange the position elements category
+// use destructuring to switching variable (change the position elements category)
 [main, secondary] = [secondary, main];
 console.log(main, secondary); // Vegetarian Italian
 
+// TODO2
+// Desctructuring from function
+// Receive 2 return values from a function
+const [starter, mainCourse] = restaurant.order(2,0);
+console.log(starter, mainCourse); // Garlic Bread Pizza
+
+//Destructuring inside the destructuring
+const nested = [2, 4, [5, 6]];
+//dont use destructuring
+// const [i, , j] = nested; // 2 (2) [5, 6]
+//using destructuring
+const [i, ,[j, k]] = nested; // 2 5 6
+console.log(i, j, k);
