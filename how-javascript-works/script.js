@@ -98,32 +98,57 @@
 // };
 // firyal.calcAge(2002);
 
-//Arrow function inside the object
-const firyal = {
-  year: 2002,
+// //Arrow function inside the object
+// const firyal = {
+//   year: 2002,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2022 - this.year);
+//   },
+
+//   //the example
+//   greet: () => console.log(`Halo ${this.firstName}`),
+// };
+// firyal.greet();
+
+// //Regular function inside the method
+// const salwa = {
+//   year: 2004,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2022 - this.year);
+
+//     //the example
+//     const isGenZ = function () {
+//       console.log(this);
+//       console.log(this.year >= 1990 && this.year <= 2010);
+//     };
+//     isGenZ();
+//   },
+// };
+// salwa.calcAge();
+
+//Solution 
+const mikasa = {
+  year: 2000,
   calcAge: function () {
     console.log(this);
     console.log(2022 - this.year);
-  },
 
-  //the example
-  greet: () => console.log(`Halo ${this.firstName}`),
-};
-firyal.greet();
-
-//Regular function inside the method
-const salwa = {
-  year: 2004,
-  calcAge: function () {
-    console.log(this);
-    console.log(2022 - this.year);
-
-    //the example
+    //the solution use self
+    const self = this;
     const isGenZ = function () {
-      console.log(this);
-      console.log(this.year >= 1990 && this.year <= 2010);
+      console.log(self); //calcAge: ƒ () year: 2004;
+      console.log(self.year >= 1990 && self.year <= 2010); // true
     };
     isGenZ();
+
+    //the solution use arrow function that parent to mikasa
+    const isMillenials = () => {
+      console.log(this); //calcAge: ƒ () year: 2004;
+      console.log(this.year >= 1980 && this.year <= 1990); // false
+    };
+    isMillenials();
   },
 };
-salwa.calcAge();
+mikasa.calcAge();
