@@ -53,57 +53,66 @@ const restaurant = {
   },
 };
 
-//TODO 7
-const ingredients = [
-  prompt('Lets make pasta! Ingredient 1?'),
-  prompt('Ingredient 1?'),
-  prompt('Ingredient 1?'),
-];
-console.log(ingredients);
+//TODO 8
+//Objects
+const newRestaurant = { foundedIn: 1988, ...restaurant, founder: 'Guiseppe'};
+console.log(newRestaurant);
 
-//instead of calling like this
-restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
-//its better using spread operator, more simple
-restaurant.orderPasta(...ingredients); 
+const restaurantCopy = {...restaurant};
+restaurantCopy.name = 'Ristorante Roma';
+console.log(restaurantCopy.name);// Ristorante Roma
+console.log(restaurant.name); // Classico Italiano
+//changing one object will not changing the other one
 
-// (3) ['cheese', 'mushrom', 'macaroni']
-// Here is your delicious pasta with cheese, mushrom, macaroni
-// Here is your delicious pasta with cheese, mushrom, macaroni
+// //TODO 7
+// const ingredients = [
+//   prompt('Lets make pasta! Ingredient 1?'),
+//   prompt('Ingredient 1?'),
+//   prompt('Ingredient 1?'),
+// ];
+// console.log(ingredients);
 
+// //instead of calling like this
+// restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+// //its better using spread operator, more simple
+// restaurant.orderPasta(...ingredients);
 
+// // (3) ['cheese', 'mushrom', 'macaroni']
+// // Here is your delicious pasta with cheese, mushrom, macaroni
+// // Here is your delicious pasta with cheese, mushrom, macaroni
 
-// TODO 6
-// The spread Operator (...)
+// // TODO 6
+// // The spread Operator (...)
 
-//not using the spread operator
-const arr = [7, 8, 9];
-const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
-console.log(badNewArr); // (5) [1, 2, 7, 8, 9]
+// //not using the spread operator
+// const arr = [7, 8, 9];
+// const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+// console.log(badNewArr); // (5) [1, 2, 7, 8, 9]
 
-//using spread operator
-const newArr = [1, 2, ...arr];
-console.log(newArr); // (5) [1, 2, 7, 8, 9]
+// //using spread operator
+// const newArr = [1, 2, ...arr];
+// console.log(newArr); // (5) [1, 2, 7, 8, 9]
 
-console.log(...newArr);
-console.log(1, 2, 7, 8, 9);
+// console.log(...newArr);
+// console.log(1, 2, 7, 8, 9);
 
-// add food to mainMenu Array
-const newMenu = [...restaurant.mainMenu, 'Gnocci'];
-console.log(newMenu); //(4) ['Pizza', 'Pasta', 'Risotto', 'Gnocci']
+// // add food to mainMenu Array
+// const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+// console.log(newMenu); //(4) ['Pizza', 'Pasta', 'Risotto', 'Gnocci']
 
-// Copy Array
-const mainMenuCopy = [...restaurant.mainMenu];
+// // Copy Array
+// const mainMenuCopy = [...restaurant.mainMenu];
 
-// join 2 arrays
-const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
-console.log(menu); // (7) ['Pizza', 'Pasta', 'Risotto', 'Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
+// // join 2 arrays
+// const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// console.log(menu); // (7) ['Pizza', 'Pasta', 'Risotto', 'Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
 
-//Iterables: arrays, strings, maps, sets, NOT objects
-const str = 'Firyal';
-const letters = [...str, '', 'l.'];
-console.log(letters); //(8) ['F', 'i', 'r', 'y', 'a', 'l', '', 'l.']
-console.log(...str); // F i r y a l
-// multiple values separated by a comma are usually only expected when we pass arguments into a function, or when we build a new array.
+// //Iterables: arrays, strings, maps, sets, NOT objects
+// const str = 'Firyal';
+// const letters = [...str, '', 'l.'];
+// console.log(letters); //(8) ['F', 'i', 'r', 'y', 'a', 'l', '', 'l.']
+// console.log(...str); // F i r y a l
+// // multiple values separated by a comma are usually only expected when we pass arguments into a function, or when we build a new array.
 
 // // TODO 5
 // // pass object into the function as argument
