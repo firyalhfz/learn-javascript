@@ -40,13 +40,37 @@ const restaurant = {
     starterIndex = 1,
     time = '20:00',
     mainIndex = 0,
-    address = 'mars'
+    address = 'mars',
   }) {
     console.log(
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
+
+  // TODO 7
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, ${ing3}`);
+  },
 };
+
+//TODO 7
+const ingredients = [
+  prompt('Lets make pasta! Ingredient 1?'),
+  prompt('Ingredient 1?'),
+  prompt('Ingredient 1?'),
+];
+console.log(ingredients);
+
+//instead of calling like this
+restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+//its better using spread operator, more simple
+restaurant.orderPasta(...ingredients); 
+
+// (3) ['cheese', 'mushrom', 'macaroni']
+// Here is your delicious pasta with cheese, mushrom, macaroni
+// Here is your delicious pasta with cheese, mushrom, macaroni
+
+
 
 // TODO 6
 // The spread Operator (...)
@@ -109,8 +133,8 @@ console.log(...str); // F i r y a l
 // } = restaurant;
 // console.log(restaurantName, hours, tags);
 // /*
-// Classico Italiano 
-// {thu: {…}, fri: {…}, sat: {…}} 
+// Classico Italiano
+// {thu: {…}, fri: {…}, sat: {…}}
 // (4) ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']
 // */
 
