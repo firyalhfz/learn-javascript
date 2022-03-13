@@ -96,7 +96,12 @@ if(restaurant.orderPizza){
 
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach')
 
+// Nullish: null and undefined (NOT 0 or '')
+console.log('---- ?? ----');
 
+restaurant.numGuests = 0;
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect); // 0
 
 
 // // TODO 9
