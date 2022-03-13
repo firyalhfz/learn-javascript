@@ -60,7 +60,12 @@ const restaurant = {
 };
 
 // TODO 10
+//Short Circuiting
 // use ANY daya type, return ANY data type, short-circuiting
+//if both true, then result is the first right value
+// if one of false, then the result is the first right value
+// if both false, then the result is the last false value
+console.log('---- OR ----');
 console.log(3 || 'Firyal'); // 3
 console.log(''|| 'Firyal'); // Firyal
 console.log(true || 0); //true
@@ -75,6 +80,22 @@ console.log(guest1); // 10
 // instead doing code above just doing this
 const guest2 =  restaurant.numGuests || 10;
 console.log(guest2);
+
+// if both true, then result is the last right value
+// if one of false, then result is the first false value
+console.log('---- AND ----');
+console.log(0 && 'Firyal');
+console.log(7 && 'Firyal');
+
+console.log('Hello' && 23 && null && 'Firyal');
+
+//practical example
+if(restaurant.orderPizza){
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach')
+
 
 
 
