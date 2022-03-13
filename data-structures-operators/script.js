@@ -59,59 +59,78 @@ const restaurant = {
   },
 };
 
-// TODO 9
-// 1. Destructuring Rest Pattern
+// TODO 10
+// use ANY daya type, return ANY data type, short-circuiting
+console.log(3 || 'Firyal'); // 3
+console.log(''|| 'Firyal'); // Firyal
+console.log(true || 0); //true
+console.log(undefined || null); // null
 
-// SPREAD, because on right side of =
-const arr = [1, 2, ...[3, 4]];
+console.log(undefined || 0 || '' || 'Hai' || 23 || null); // Hai
 
-// REST, bcause on left side of =
-const [a, b, ...others] = [1, 2, 3, 4, 5];
-console.log(a, b, others);
+//if numguests exist so show the number if there is not so show 10 number
+const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guest1); // 10
 
-const [pizza, , risotto, ...otherFood] = [
-  ...restaurant.mainMenu,
-  ...restaurant.starterMenu,
-];
-console.log(pizza, risotto, otherFood);
+// instead doing code above just doing this
+const guest2 =  restaurant.numGuests || 10;
+console.log(guest2);
 
-//Objects
-const { sat, ...weekdays } = restaurant.openingHours;
-console.log(weekdays);
 
-/**
- *1 2 (3) [3, 4, 5]
- * Pizza Risotto (4) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
- *  {thu: {…}, fri: {…}}
- * */
 
-// 2. Functions
-const add = function (...numbers) {
-  let sum = 0;
-  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
-  console.log(sum);
-};
+// // TODO 9
+// // 1. Destructuring Rest Pattern
 
-add(2, 3); // 5
-add(2, 3, 4, 5, 6); //20
-add(2, 3, 4, 5, 6, 2, 7, 9); // 38
+// // SPREAD, because on right side of =
+// const arr = [1, 2, ...[3, 4]];
 
-const x = [4, 6, 1];
-add(...x); // 11
+// // REST, bcause on left side of =
+// const [a, b, ...others] = [1, 2, 3, 4, 5];
+// console.log(a, b, others);
 
-restaurant.orderPizza('mushroom', 'onion', 'olives', 'spinach');
-/**
- * mushroom
- * (3) ['onion', 'olives', 'spinach']
- */
+// const [pizza, , risotto, ...otherFood] = [
+//   ...restaurant.mainMenu,
+//   ...restaurant.starterMenu,
+// ];
+// console.log(pizza, risotto, otherFood);
 
-//if we just write mushrom, then the others ingredients will be empty array
-restaurant.orderPizza('mushroom');
+// //Objects
+// const { sat, ...weekdays } = restaurant.openingHours;
+// console.log(weekdays);
 
-/**
- * mushroom
- * []
- */
+// /**
+//  *1 2 (3) [3, 4, 5]
+//  * Pizza Risotto (4) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
+//  *  {thu: {…}, fri: {…}}
+//  * */
+
+// // 2. Functions
+// const add = function (...numbers) {
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+//   console.log(sum);
+// };
+
+// add(2, 3); // 5
+// add(2, 3, 4, 5, 6); //20
+// add(2, 3, 4, 5, 6, 2, 7, 9); // 38
+
+// const x = [4, 6, 1];
+// add(...x); // 11
+
+// restaurant.orderPizza('mushroom', 'onion', 'olives', 'spinach');
+// /**
+//  * mushroom
+//  * (3) ['onion', 'olives', 'spinach']
+//  */
+
+// //if we just write mushrom, then the others ingredients will be empty array
+// restaurant.orderPizza('mushroom');
+
+// /**
+//  * mushroom
+//  * []
+//  */
 
 // //TODO 8
 // //Objects
