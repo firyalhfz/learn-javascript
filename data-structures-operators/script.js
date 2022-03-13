@@ -67,7 +67,7 @@ const restaurant = {
 // if both false, then the result is the last false value
 console.log('---- OR ----');
 console.log(3 || 'Firyal'); // 3
-console.log(''|| 'Firyal'); // Firyal
+console.log('' || 'Firyal'); // Firyal
 console.log(true || 0); //true
 console.log(undefined || null); // null
 
@@ -78,7 +78,7 @@ const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
 console.log(guest1); // 10
 
 // instead doing code above just doing this
-const guest2 =  restaurant.numGuests || 10;
+const guest2 = restaurant.numGuests || 10;
 console.log(guest2);
 
 // if both true, then result is the last right value
@@ -90,11 +90,11 @@ console.log(7 && 'Firyal');
 console.log('Hello' && 23 && null && 'Firyal');
 
 //practical example
-if(restaurant.orderPizza){
+if (restaurant.orderPizza) {
   restaurant.orderPizza('mushrooms', 'spinach');
 }
 
-restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach')
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 
 // Nullish: null and undefined (NOT 0 or '')
 console.log('---- ?? ----');
@@ -103,6 +103,39 @@ restaurant.numGuests = 0;
 const guestCorrect = restaurant.numGuests ?? 10;
 console.log(guestCorrect); // 0
 
+// TODO 11 Logical assignment Operator
+const rest1 = {
+  name: "Mikasa's Restaurant",
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: "Annie's Restaurant",
+  owner: 'Annie',
+};
+
+//OR assignment operator
+rest1.numGuests = rest1.numGuests || 10;
+rest2.numGuests = rest2.numGuests || 10;
+rest1.numGuests ||= 10;
+rest2.numGuests ||= 10;
+
+//nuliish assignment operator (null or defined)
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+//AND assignment operator
+rest1.owner &&= '<ANONYMOUS>';
+rest2.owner &&= '<ANONYMOUS>';
+
+console.log(rest1);
+console.log(rest2);
+
+/*conclution of logical assignment operator
+ * if we want to the 0 is print to the console so use ?? because it will ok if the value is 0,
+ * different with || is not okey if the value is 0, it will print the right value.
+ * if we use && and the both is true so will print the last right value
+ */
 
 // // TODO 9
 // // 1. Destructuring Rest Pattern
