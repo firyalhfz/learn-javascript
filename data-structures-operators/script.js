@@ -60,9 +60,9 @@ const restaurant = {
 };
 
 // TODO 10
-//Short Circuiting
+// Short Circuiting
 // use ANY daya type, return ANY data type, short-circuiting
-//if both true, then result is the first right value
+// if both true, then result is the first right value
 // if one of false, then the result is the first right value
 // if both false, then the result is the last false value
 console.log('---- OR ----');
