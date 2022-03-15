@@ -59,6 +59,29 @@ const game = {
   },
 };
 
+//semuanya
+const x = Object.entries(game.odds);
+console.log(x);
+//(3) [Array(2), Array(2), Array(2)]
+
+// const y = game.odds.entries();
+// console.log(y);
+//error
+
+//values
+const v = Object.values(game.odds);
+console.log(v);
+//(3) [1.33, 3.25, 6.5]
+
+// const j = game.odds.values();
+// console.log(j);
+//error
+
+//key
+const k = Object.keys(game.odds);
+console.log(k);
+//(3) ['team1', 'x', 'team2']
+
 //QUESTION 1
 // const scored = {...game.scored};
 // console.log(scored);
@@ -69,7 +92,7 @@ const game = {
 //   console.log(item)
 // }
 
-for (const [goal, person] of game.scored.entries()) {
+for (const [goal, person] of Object.entries(game.scored)) {
   console.log(`Goal ${goal + 1} : ${person}`);
 }
 
@@ -105,17 +128,31 @@ console.log(average);
 // }
 
 //QUESTION 3
-for(const [team, odd] of Object.entries(game.odds)){
-  const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`
-  console.log( `Odd of ${teamStr} ${odd}`);
+for (const [team, odd] of Object.entries(game.odds)) {
+  const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+  console.log(`Odd of ${teamStr} ${odd}`);
 }
+
+//we use game[key] because the name of key odds and the name of property object same team1 and team2
+for (const [key, value] of Object.entries(game.odds)) {
+  // console.log(key); //team1 x team2
+  // console.log(game[key]); //paradis undefined eldian
+  // console.log(game[key] ? 'victory' : 'draw'); //victory draw victory
+  console.log( `Odd of ${game[key] ? 'victory' : 'draw'} ${game[key] ?? ''}: ${value}`
+  );//
+}
+
+/**
+ * Odd of victory paradis: 1.33
+ * Odd of draw : 3.25
+ * Odd of victory eldian: 6.5
+ */
 
 //BONUS
 const scorers = {};
 for (let x of game.scored) {
   scorers[x]++ || (scorers[x] = 1);
 }
-
 console.log(scorers);
 
 /**
@@ -123,3 +160,4 @@ console.log(scorers);
 If not so add the player to the object and set its value to 1. If the player exist increment its value by 1.
 So for the case of 'Lewandowski' at the first loop, it will be added to the object with a value of 1 (as 'scorers[player] = false')  then when it comes again in the loop, it will NOT be added again (as 'scorers[player] = true') but it value will be incremented by 1.
  */
+
