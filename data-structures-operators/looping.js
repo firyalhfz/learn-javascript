@@ -37,6 +37,50 @@ const restaurant = {
   },
 };
 
+//TODO 15
+//Looping objects: object keys, values, and entires
+
+// Property NAMES
+//object keys
+const properties = Object.keys(openingHours);
+console.log(properties); // (3) ['thu', 'fri', 'sat']
+
+let openStr = `We are open on ${properties.length} days: `;
+for(const day of properties){
+  openStr += `${day}, `;
+}
+console.log(openStr); // We are open on 3 days: thu, fri, sat,
+
+for (const day of Object.keys(openingHours)) {
+  console.log(day);
+}
+/**
+ * thu
+ * fri
+ * sat
+ */
+
+//Property VALUES
+const values = Object.values(openingHours);
+console.log(values);
+
+//ENTRIES object
+const entries = Object.entries(openingHours);
+console.log(entries);
+// (3) [Array(2), Array(2), Array(2)]
+
+//[key, value]
+//for of the entries [key, value]
+for (const [day, {open, close}] of entries){
+  console.log(`On ${day} we open at ${open} and close at ${close}`);
+}
+/**
+ * On thu we open at 12 and close at 22
+ * On fri we open at 11 and close at 23
+ * On sat we open at 0 and close at 24
+ */
+
+
 //TODO 14 optional chaining
 if (restaurant.openingHours && restaurant.openingHours.mon)
   console.log(restaurant.openingHours.mon.open);
@@ -65,15 +109,14 @@ console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
 
 //Arrays
 //check if array exist or not
-const users = [{name: 'Firyal', email: 'firyal@gmail.com'}]
+const users = [{ name: 'Firyal', email: 'firyal@gmail.com' }];
 
-//use optional chaining 
+//use optional chaining
 console.log(users[0]?.name ?? 'user array empty');
 
-//if using if else 
-if(users.length > 0) console.log(users[0].name);
+//if using if else
+if (users.length > 0) console.log(users[0].name);
 else console.log('user array empty');
-
 
 // TODO 12
 // Looping arrays : The for loop
