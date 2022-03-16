@@ -106,3 +106,103 @@ console.log(rest.get(time >= rest.get('open') && time <= rest.get('close'))); //
  * second, we set the value of that array
  * last, we get the value by using get() inside the paranthesist call variable array (arr)
  */
+
+//////////////////////////////////////////////////
+// TODO 18 Maps iteration
+
+const question = new Map([
+  ['question', 'What is the best programming language is the world?'],
+  [1, 'C'], 
+  [2, 'Java'],
+  [3, 'Javascript'],
+  ['correct', 3],
+  [true, 'Correct'],
+  [false, 'Try again!'],
+]);
+console.log(question); 
+//Map(7) {'question' => 'What is the best programming language is the world?', 1 => 'C', 2 => 'Java', 3 => 'Javascript', 'correct' => 3, …}
+
+console.log([...question]);
+// (7)[(Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2))];
+
+/**
+ * in the line 113
+ * we make new map without using set method, we make by arrays inside array and elements
+ * we make array inside the map for question, answer, correct answer and boolean when correct so string correct, and if wrong then try again
+ */
+
+const openingHours = {
+  thu: {
+    open: 12,
+    close: 22,
+  },
+  fri: {
+    open: 11,
+    close: 23,
+  },
+  sat: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
+
+// Convert object to map
+console.log(Object.entries(openingHours)); 
+//(3)[(Array(2), Array(2), Array(2))];
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
+//Map(3) {'thu' => {…}, 'fri' => {…}, 'sat' => {…}}
+
+/**
+ * actually the map question line 113 is exactly the same array structure that is returned from calling object.entries() e.g Object.entries(openingHours)
+ * we get an array of arrays where the first element is the key and the second one is the value.
+ * So its means is there is an easy way to convert from objects to maps
+ * The structure that results from object.entries same like question map. 
+ */
+
+//Quiz App
+console.log(question.get('question')); //What is the best programming language is the world?
+for(const[key, value] of question){
+  if(typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+}
+
+// const answer = Number(prompt('Your answer?'))
+const answer = 3;
+console.log(answer);
+
+//if the answer is true so yeah will console correct
+console.log(question.get(question.get('correct') === answer));
+
+/**
+ * Line 165
+ * use for of loop question
+ * the difference is that for the object we need objcet.entries() because object non literably 
+ * for of the map just write the variable_name of the map
+ * if type of the key is number then console the key answer and value
+ */
+
+/**
+ * line 169
+ * use prompt used to the user to input a value
+ */
+
+/**
+ * line 174 
+ * use the boolean to check the correct message
+ * if we get an answer and the answer is same like the correct key, so it will call the key true, and the result is "correct"
+ */
+
+//Convert map to array
+console.log([...question]); // (7)[(Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2))];
+// console.log(question.entries);
+console.log([...question.keys()]); //(7) ['question', 1, 2, 3, 'correct', true, false]
+console.log([...question.values()]); 
+/**
+ * (7) ['What is the best programming language is the world?', 'C', 'Java', 'Javascript', 3, 'Correct', 'Try again!']
+ */
+
+/**
+ * line 196 
+ * convert map to array use the spread operator
+ * we also can use the keys() and values()
+ */
