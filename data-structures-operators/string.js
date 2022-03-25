@@ -32,7 +32,81 @@ checkMiddleSeat('11B'); // You got the middle seat
 checkMiddleSeat('23C'); // You got lucky
 checkMiddleSeat('3E'); // You got the middle seat
 
-
 console.log(new String('Firyal')); //
 console.log(typeof new String('Firyal')); //object
 console.log(typeof new String('Firyal').slice(1)); // string
+
+/////////////////////////////////////////////////////////////
+//TODO 20 works with string
+
+const airline2 = 'TAP Air Indonesia';
+
+console.log(airline2.toLowerCase());
+console.log(airline2.toUpperCase());
+
+//fix capitalization in name
+const passenger = 'fiRYal';
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1).toLowerCase();
+
+console.log(passengerCorrect);
+
+/**
+ * So in line 49 we make all of the abjact become lowecase
+ * in line 50 we make the firts abjact using [0] to uppercase and the rest of abjact using slice(1) to lowercase
+ * and the result is Firyal
+ */
+
+//email
+const email = 'hello@firyal.io';
+const loginEmail = ' hello@Firyal.io \n';
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+
+console.log(normalizedEmail);
+console.log(email === normalizedEmail);
+
+/**
+ * trim() = method for Remove spaces
+ */
+
+//Replacing
+const price = '463,273';
+const priceCorrect = price.replace(',', '.');
+console.log(priceCorrect);
+
+const announcement =
+  'All passengers come to boarding door 23. Boarding door 23!';
+
+console.log(announcement.replace('door', 'gate'));
+console.log(announcement.replace(/door/g, 'gate')); // for replace all of the door
+
+//Booleans
+const plane3 = 'Airbus A41neo';
+console.log(plane3.includes('A41'));
+console.log(plane3.includes('Boew'));
+console.log(plane3.includes('Airb'));
+console.log(plane3.startsWith('Airb'));
+
+if(plane3.startsWith('Airbus') && plane3.endsWith('neo')){
+  console.log('Part of the New Airbus family');
+}
+
+//practice exercise
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  if (baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('You are not allowed on board!!');
+  } else {
+    console.log('Welcome board');
+  }
+};
+
+checkBaggage('I have a laptop, some food, and a pocket Knife');
+checkBaggage('Socks and camera');
+checkBaggage('Got some snacks and a gun for protection');
+
+/***
+ * we change the item to lower case, so that when we check with the if else statement, no mater the argument that console, it will be affected. if we not using items.toLowerCase, our cl line 106 that Knife is capital will not effect.
+ */
