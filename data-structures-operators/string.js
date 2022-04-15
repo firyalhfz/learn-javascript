@@ -89,7 +89,7 @@ console.log(plane3.includes('Boew'));
 console.log(plane3.includes('Airb'));
 console.log(plane3.startsWith('Airb'));
 
-if(plane3.startsWith('Airbus') && plane3.endsWith('neo')){
+if (plane3.startsWith('Airbus') && plane3.endsWith('neo')) {
   console.log('Part of the New Airbus family');
 }
 
@@ -110,3 +110,40 @@ checkBaggage('Got some snacks and a gun for protection');
 /***
  * we change the item to lower case, so that when we check with the if else statement, no mater the argument that console, it will be affected. if we not using items.toLowerCase, our cl line 106 that Knife is capital will not effect.
  */
+
+console.log('a+very+nice+string'.split('+')); // (4) ['a', 'very', 'nice', 'string']
+console.log('Firyal Huwaida'.split(' ')); // (2) ['Firyal', 'Huwaida']
+
+const [firstName, lastName] = 'Firyal Huwaida'.split(' ');
+
+const newName = ['Mrs.', firstName, lastName.toUpperCase()].join(' ');
+console.log(newName); // Mrs. Firyal HUWAIDA
+
+const capitalizeName = function (name) {
+  const names = name.toLowerCase().split(' ');
+  const namesUpper = [];
+
+  for (const n of names) {
+    // namesUpper.push(n.toLowerCase(), n[0].toUpperCase())
+    namesUpper.push(n[0].toUpperCase() + n.slice(1));
+  }
+
+  console.log(namesUpper.join(' '));
+};
+
+capitalizeName('mikasA ackerman');
+capitalizeName('erEn yeager');
+
+///padding
+const message = 'Go to gate 23';
+console.log(message.padStart(20, '+').padEnd(30, '+'));
+console.log('Firyal'.padStart(20, '+').padEnd(30, '+'));
+
+const maskCreditCard = function (number) {
+  const str = number + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+};
+
+console.log(maskCreditCard(539634780386));
+console.log(maskCreditCard('3864237856329756329856329'));
